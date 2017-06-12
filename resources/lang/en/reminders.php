@@ -1,0 +1,37 @@
+<?php
+
+return [
+    'add_new'           => 'Add reminder',
+    'reminder'          => 'Reminder|Reminders',
+    'reminders'         => 'Reminders',
+    'all_reminders'     => 'All reminders',
+    'show_all'          => 'Show all',
+    'priority_low'      => 'Low',
+    'priority_normal'   => 'Normal',
+    'priority_medium'   => 'Medium',
+    'priority_high'     => 'High',
+    'scope_global'      => 'Global',
+    'scope_personal'    => 'Personal reminders',
+    'finish_reminder'   => 'Finish',
+    'status_finished'   => 'Finished',
+    'remind_on_date'    => 'Remind on date',
+    'remind_to'         => 'Remind to',
+    'remind_time'       => 'Reminder time',
+    'engine_work_hours' => 'Engine work hours',
+    'reminder_after'    => 'Reminder after',
+    'validation'        => [
+        'priority'        => 'Invalid priority',
+        'is_global'       => 'Invalid reminder scope',
+        'intended_for'    => 'Invalid recipient',
+        'description'     => 'Invalid description',
+        'name'            => 'The name is required',
+        'users'           => 'Invalid users specified',
+        'groups'          => 'Invalid groups specified',
+        'tracked_objects' => 'Invalid tracked object',
+        'group_or_user'   => 'Choose at least a group or user',
+        'hours'           => 'Choose hour',
+        'date'            => 'Choose date',
+        'date_or_km_or_work_hours' => 'Choose date and time or kilomiters or working hours',
+
+    ],
+];

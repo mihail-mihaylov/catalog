@@ -1,0 +1,150 @@
+/* graph stsistics */
+
+#daily-distance-chart .tick line, #daily-max-speed-chart .tick line {
+    display: none;
+}
+
+/* popup */
+
+.leaflet-popup {
+    position: absolute;
+    text-align: center;
+    }
+.leaflet-popup-content-wrapper {
+    padding: 1px;
+    text-align: left;
+    -webkit-border-radius: 12px;
+            border-radius: 12px;
+    }
+.leaflet-popup-content {
+    margin: 13px 19px;
+    line-height: 1.4;
+    }
+.leaflet-popup-content p {
+    margin: 18px 0;
+    }
+.leaflet-popup-tip-container {
+    margin: 0 auto;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    }
+.leaflet-popup-tip {
+    width: 17px;
+    height: 17px;
+    padding: 1px;
+
+    margin: -10px auto 0;
+
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: white;
+
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    }
+.leaflet-container a.leaflet-popup-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 4px 0 0;
+    text-align: center;
+    width: 18px;
+    height: 14px;
+    font: 16px/14px Tahoma, Verdana, sans-serif;
+    color: #c3c3c3;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    }
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: #999;
+    }
+.leaflet-popup-scrolled {
+    overflow: auto;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    }
+
+/* Dashboard count statistics boxes */
+
+.stat-boxes2 {
+    display: inline-block;
+    list-style: none outside none;
+    margin:0px;
+    text-align: center;
+}
+.stat-boxes2 li {
+    display: inline-block;
+    line-height: 18px;
+    margin: 0 0 0 20px;
+    padding: 0 10px;
+    /*background:#fff; border: 1px solid #DCDCDC*/
+    color: #fff;
+}
+
+.stat-boxes2 li:first-child {
+    margin-left: 0px;
+}
+
+.stat-boxes2 li:hover{
+    /* background: #f6f6f6; */
+    background: #2E363F;
+}
+
+.stat-boxes2 .left, .stat-boxes .right {
+    text-shadow: 0 1px 0 #fff;
+    float: left;
+}
+
+.stat-boxes2 .left {
+    /* border-right: 1px solid #DCDCDC; */
+    /* box-shadow: 1px 0 0 0 #FFFFFF; */
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px 0 6px 4px;
+}
+
+.stat-boxes2 .right {
+    /* color: #666666; */
+    font-size: 12px;
+    padding: 9px 10px 7px 0;
+    text-align: center;
+    min-width: 70px; float:left
+}
+
+.stat-boxes2 .left span, .stat-boxes2 .right strong {
+    display: block;
+}
+
+.stat-boxes2 .right strong {
+    font-size: 26px;
+    margin-bottom: 3px;
+    margin-top: 6px;
+}
+
+.stat-boxes2 .stat-icon {
+    font-size: 40px;
+}
+
+/*Metro Background color class*/
+
+.bg_lb{ background:#27a9e3;}
+.bg_db{ background:#2295c9;}
+.bg_lg{ background:#28b779;}
+.bg_dg{ background:#28b779;}
+.bg_ly{ background:#ffb848;}
+.bg_dy{ background:#da9628;}
+.bg_ls{ background:#2255a4;}
+.bg_lo{ background:#da542e;}
+.bg_lr{ background:#f74d4d;}
+.bg_lv{ background:#603bbc;}
+.bg_lh{ background:#b6b3b3;}
+.bg_gr{ background:#a2a1a1;}
+

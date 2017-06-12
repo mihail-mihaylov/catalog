@@ -1,0 +1,73 @@
+<script>
+    var translations =
+    {
+        "search": "{{trans('dataTables.search')}}",
+        "searchPlaceholder": "{{trans('dataTables.searchPlaceholder')}}",
+        "lengthMenu": "{{trans('dataTables.lengthMenu')}}",
+        "zeroRecords": "{{trans('dataTables.zeroRecords')}}",
+        "info": "{{trans('dataTables.info')}}",
+        "infoEmpty": "{{trans('dataTables.infoEmpty')}}",
+        "infoFiltered": "{{trans('dataTables.infoFiltered')}}",
+        "previous": "{{trans('dataTables.previous')}}",
+        "next": "{{trans('dataTables.next')}}",
+        "print": "{{trans('dataTables.print')}}",
+        "searchAddressPlaceholder": "{{trans('poi.searchAddressPlaceholder')}}",
+        "days":"{{ trans('reports.days') }}",
+        "km":"{{ trans('general.km') }}",
+        "km_hours":"{{ trans('general.km_hours') }}",
+        "hours":"{{ trans('general.hours') }}",
+        "first_movement":"{{ trans('reports.first_movement') }}",
+        "course_number": "{{ trans('reports.course_number') }}",
+        "motion_hours": "{{ trans('reports.motion_hours') }}",
+        "stop_hours": "{{ trans('reports.stop_hours') }}",
+        "driver": "{{ trans_choice('drivers.driver',1) }}",
+        "distance": "{{ trans('general.distance') }}",
+        "tookoff": "{{ trans('reports.tookoff') }}",
+        "arrivedat": "{{ trans('reports.arrivedat') }}",
+        "unknown_driver": "{{ trans('dashboard.unknown_driver') }}",
+        "general_report": "{{ trans('dashboard.general_report') }}",
+        "report_yesterday": "{{ trans('dashboard.report_yesterday') }}",
+        "report_today": "{{ trans('dashboard.report_today') }}",
+        "report_seven_days": "{{ trans('dashboard.report_seven_days') }}",
+        "no_data": "{{ trans('general.no_data') }}",
+        "stopped_at": "{{ trans('dashboard.stopped_at') }}",
+        "took_off_at": "{{ trans('dashboard.took_off_at') }}",
+        "engine_on": "{{ trans('dashboard.engine_on') }}",
+        "engine_off": "{{ trans('dashboard.engine_off') }}",
+        "view_on_map": "{{ trans('general.view_on_map') }}",
+        "view_on_street_view": "{{ trans('dashboard.view_on_street_view') }}",
+        "colvis": "{{ trans('dataTables.colvis') }}",
+        "speed": "{{ trans('general.speed') }}",
+        "time": "{{ trans('general.time') }}",
+        "current_speed": "{{ trans('general.current_speed') }}",
+        "allowed_speed": "{{ trans('general.allowed_speed') }}",
+        "view_violation": "{{ trans('violations.view_violation') }}",
+        "by_speed": "{{ trans('violations.by_speed') }}",
+        "by_area": "{{ trans('violations.by_area') }}",
+        "tow": "{{ trans('trackedObjects.tow') }}",
+        "fake_tow": "{{ trans('trackedObjects.fake_tow') }}",
+        "ignition_off_rest": "{{ trans('trackedObjects.ignition_off_rest') }}",
+        "ignition_off_motion": "{{ trans('trackedObjects.ignition_off_motion') }}",
+        "ignition_on_rest": "{{ trans('trackedObjects.ignition_on_rest') }}",
+        "ignition_on_motion": "{{ trans('trackedObjects.ignition_on_motion') }}",
+        "sensor_rest": "{{ trans('trackedObjects.sensor_rest') }}",
+        "sensor_motion": "{{ trans('trackedObjects.sensor_motion') }}",
+        "no_status_detected": "{{ trans('trackedObjects.no_status_detected') }}",
+        "undefined": "{{ trans('trackedObjects.undefined') }}",
+        'view_location': "{{ trans('general.view_location') }}",
+        'manage_train': "{{ trans('dashboard.manage_train') }}",
+        'new': "{{ trans('dashboard.new') }}",
+        'gps': "{{ trans('general.gps') }}",
+        'can': "{{ trans('general.can') }}",
+        'run': "{{ trans('general.run') }}",
+
+        // CANBUS reports
+        @foreach (trans('reports.canbus') as $parameter => $details)
+            @if (isset($details['units']))
+                @foreach($details['units'] as $unit_key => $unit_value)
+                    "{{ $parameter . '.' . $unit_key }}": "{{ $unit_value }}",
+                @endforeach
+            @endif
+        @endforeach
+    }
+</script>

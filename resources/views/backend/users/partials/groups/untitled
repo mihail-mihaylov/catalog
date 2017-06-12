@@ -1,0 +1,34 @@
+@foreach($groups as $group)
+                @can('manageGroup', $managedCompany)
+                <tr class="gradeX" id="group_{{$group->id}}">
+                    <td>
+                        {{ $group->id }}
+                    </td>
+                    <td>
+                        @foreach($group->translations as $translation)
+                        {{$translation->language ? $translation->language->name : null }} - {{$translation->name}}
+                        <br/>
+                        @endforeach
+                    </td>
+                    <td class="center">
+                        <a class="edit_group btn btn-warning" href="{{ route('group.getEdit', ['id' => $group->id]) }}">Редакция</a>
+                        @can('deleteGroup', $managedCompany)
+                        @if($group->deleted_at)
+                        <a class="restore_group btn btn-info" href="{{ route('group.restore', ['id' => $group->id]) }}">Възстановяване</a>
+                        @else
+                        {!! Form::open([
+                            'url'    => route('group.destroy', ['id' => $group->id]),
+                            'method' => 'delete',
+                            'class'  => 'form-horizontal',
+                            'class'     => 'delete_group'
+                            ]) !!}
+                            <button type="submit" class="btn btn-danger">
+                                Изтриване
+                            </button>
+                            {!! Form::close() !!}
+                            @endif
+                            @endcan
+                        </td>
+                    </tr>
+                    @endcan
+                    @endforeach

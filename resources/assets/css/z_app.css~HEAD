@@ -1,0 +1,289 @@
+/**
+ * Custom changes
+ * z_app: So can changes go at the end of file;
+ */
+
+#map {
+    height: 100%;
+}
+
+.select2-dropdown {
+    z-index: 9001 !important;
+}
+
+/* Fix select2 */
+.fix-select2 + span .select2-container--default,
+.fix-select2 + span .select2-selection--single,
+.fix-select2 + span .select2-selection--multiple,
+.select2-container--open .select2-dropdown
+{
+    border: 1px solid #E5E6E7;
+    border-radius: 0;
+    color: #676A6C;
+}
+
+.fix-select2 + span .select2-selection--single
+{
+    height: 34px;
+}
+
+.fix-select2 + span .select2-selection--single .select2-selection__rendered,
+.fix-select2 + span .select2-selection--multiple .select2-selection__rendered
+{
+    color: #676A6C;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* Fix select2 - end*/
+
+#view_violation_map {
+    height: 500px;
+}
+
+/* Data-tables fix */
+
+.dataTables_filter {
+    align: right;
+}
+
+.dataTables_filter input {
+    display: inline-block;
+    align: right;
+    padding: 5px 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin: 5px;
+    max-width: 140px;
+}
+
+.dataTables_filter label {
+    margin: 0px;
+}
+
+table.dataTable.dtr-column>tbody>tr>td.control:before,
+table.dataTable.dtr-column>tbody>tr>th.control:before
+{
+    border: none !important;
+    padding: 2px;
+    box-shadow: none !important;
+    content: '' !important;
+    background-color: inherit !important;
+    background: url('/img/plus.png') no-repeat center center;
+}
+
+table.dataTable.dtr-column>tbody>tr.parent td.control:before,
+table.dataTable.dtr-column>tbody>tr.parent th.control:before {
+    border: none !important;
+    padding: 2px;
+    box-shadow: none !important;
+    content: '' !important;
+    background-color: inherit !important;
+    background: url('/img/minus.png') no-repeat center center;
+}
+
+.data-table + .row .col-md-5,
+#generalreportstable + .row .col-md-5,
+#tripsReportTable + .row .col-md-5,
+#tripstable + .row .col-md-5,
+#trackedObjectsTable + .row .col-md-5
+{
+    height: 35px !important;
+}
+
+/* Normalize all data-table font size */
+.data-table thead tr th, .data-table tbody tr td, .data-table tfoot tr th{
+    font-size: 13px;
+}
+
+.data-table, #generalreportstable, #tripstable, #trackedObjectsTable, #tripsReportTable {
+    width: 100% !important;
+}
+
+#trackedObjectsTable thead tr th, #trackedObjectsTable tbody tr td, #trackedObjectsTable tfoot tr th{
+    font-size: 13px;
+}
+
+#tripstable thead tr th, #tripstable tbody tr td, #tripstable tfoot tr th{
+    font-size: 13px;
+}
+
+#tripsReportTable thead tr th, #tripsReportTable tbody tr td, #tripsReportTable tfoot tr th{
+    font-size: 13px;
+}
+
+#generalreportstable thead tr th, #generalreportstable tbody tr td, #generalreportstable tfoot tr th{
+    font-size: 13px;
+}
+
+/* Custom buttons, labels */
+
+.fix-title {
+    margin-top: 12px;
+    padding-left: 8px;
+}
+
+.fix-ibox-title {
+    padding-top: 7px !important;
+    padding-left: 10px !important;
+}
+
+.panel-custom>.panel-heading {
+    background-color: #008082;
+    border-color: #008082;
+    color: #fff;
+}
+
+.custom-color {
+    background-color: #008082 !important;
+    border-color: #008082 !important;
+}
+
+.btn-custom {
+    background-color: #008082;
+    border-color: #008082;
+    color: #fff !important;
+    margin: 5px !important;
+    font-size: inherit;
+}
+
+.btn-custom:hover {
+    color: #fff !important;
+    background-color: #017374;
+    border-color: #017374;
+}
+
+.label-custom, .badge-custom {
+    background-color: #008082;
+    color: #fff;
+}
+
+.ibox-title-custom {
+    background-color: #008082;
+    border-color: #008082;
+    color: #fff !important;
+    padding: 15px;
+}
+
+.ibox-footer-fix {
+    font-size: inherit !important;
+}
+
+.custom-popup a.leaflet-popup-close-button {
+    position: absolute !important;
+    padding-right: 25px !important;
+    padding-top: 15px !important;
+}
+
+.popup-table {
+    font-size:13px;
+    width:100%;
+    margin: 10;
+}
+
+.popup-table td {
+    align: left;
+    padding: 5;
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    background: #fff;
+    text-align: justify;
+    border-radius: none;
+    padding: 0 !important;
+}
+
+.custom-popup .leaflet-popup-content {
+    margin:0;
+    border:0;
+}
+
+.custom-popup .leaflet-popup-content-wrapper a {
+    color:rgba(255,255,255,0.5);
+}
+
+#manage_company{
+    width: auto;
+    margin-bottom: 0;
+}
+
+div.col-md-12.hidden-print h2{
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-weight: initial;
+}
+
+#dashboard_shared_tasks_list > div.ibox-title.fix-ibox-title > div.col-md-7{
+    z-index: 15;
+}
+
+#dashboard_shared_tasks_list > div.ibox-title.fix-ibox-title > div.ibox-tools{
+    z-index: 10;
+}
+
+#collapse_menu{
+    margin: 5px;
+}
+
+.table > thead > .gradeX > th,
+.table > tbody > .gradeX > td,
+.table > tfoot > .gradeX > th
+{
+    vertical-align: middle;
+}
+
+/**
+ * the nasty lil shit of a wizard does not initialize content height correctly
+ * as per https://github.com/rstaib/jquery-steps/issues/8
+ * here is the fix
+ */
+.wizard .content {
+    min-height: 100px!important;
+}
+.wizard .content > .body {
+    width: 100%!important;
+    height: auto!important;
+    padding: 15px!important;
+    position: relative!important;
+}
+
+.badge {
+    font-size: 13px !important;
+    font-family: Open Sans Regular;
+}
+.datepicker table tr td.today, .datepicker table tr td.today:hover, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover {
+    background-color: #3FB8AF !important;
+}
+
+.datepicker table tr td.active.active {
+    background-color: #017374 !important;
+}
+
+body .popover {
+    z-index: 2050;
+}
+
+nav ul li .nav-label,
+nav ul li .nav-second-level a
+{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+nav ul li .nav-second-level li a
+{
+    padding-left: 45px;
+}
+
+.footer
+{
+    font-size: 11px;
+}
+
+button .btn-group-xs>.btn, .btn-xs
+{
+    font-size: 11px !important;
+}
