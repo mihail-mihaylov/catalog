@@ -1,19 +1,13 @@
 <?php
 
-/**
- * Description of TrackedObjectsController
- *
- * @author Nikolay Velchev <nvelchev@neterra.net>
- */
-
-namespace App\Modules\TrackedObjects\Http\Controllers;
+namespace App\Modules\Devices\Http\Controllers;
 
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Controller;
 use App\Modules\TrackedObjects\Http\Requests\UpdateDeviceRequest;
 use App\Modules\TrackedObjects\Http\Requests\CreateDeviceRequest;
 use App\Modules\Installer\Http\Requests\CreateUpdateDeviceInputRequest;
-use App\Modules\TrackedObjects\Repositories\DeviceInterface as SlaveDevice;
+use App\Repositories\DeviceRepository;
 use App\Modules\TrackedObjects\Repositories\SlaveDeviceModelInterface as SlaveDeviceModel;
 use App\Modules\TrackedObjects\Repositories\TrackedObjectInterface as SlaveTrackedObject;
 use App\Modules\Users\Repositories\SlaveUserInterface as SlaveUser;
@@ -30,21 +24,14 @@ use App\Modules\Installer\Models\DeviceInput;
 //use Redirect;
 //use Request;
 
-class DevicesController extends Controller
+class DeviceController extends Controller
 {
+    private $deviceRepository;
 
-    use SwitchesDatabaseConnection;
-
-    public function __construct(SlaveUser $slaveUser, SlaveDevice $slaveDevice, SlaveDeviceModel $slaveDeviceModel, SlaveTrackedObject $slaveTrackedObject, DeviceInputRepository $deviceInput)
-    {
-        $this->middleware('auth');
-
-        $this->slaveTrackedObject = $slaveTrackedObject;
-        $this->slaveDeviceModel   = $slaveDeviceModel;
-        $this->slaveUser          = $slaveUser;
-        $this->slaveDevice        = $slaveDevice;
-        $this->deviceInput        = $deviceInput;
-        $this->company            = $this->getManagedCompany();
+    public function __construct(
+        DeviceRepository $deviceRepository
+    ) {
+        $this->deviceRepository = $deviceRepository;
     }
 
     /**
@@ -54,9 +41,8 @@ class DevicesController extends Controller
      */
     public function index()
     {
-        $this->authorize('ne_chepkai_tuka');
-        $user    = $this->slaveUser;
-        $devices = $this->slaveDevice->allWithDeleted(['deviceModel', 'trackedObject']);
+        $devices = $this->deviceRepository->allWithDeleted(['deviceModel']);
+
         return view('backend.devices.index', compact('user', 'devices'));
     }
 

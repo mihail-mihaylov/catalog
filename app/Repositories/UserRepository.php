@@ -1,5 +1,5 @@
 <?php
-namespace App\Modules\Users\Repositories\Eloquent;
+namespace App\Repositories;
 
 use App\User;
 use App\Modules\Users\Repositories\Eloquent\EloquentRepository;
@@ -7,7 +7,7 @@ use App\Modules\Users\Repositories\SlaveUserInterface;
 use Gate;
 use Illuminate\Support\Facades\Session;
 
-class SlaveUserRepository extends EloquentRepository
+class UserRepository extends EloquentRepository
 {
     // public $translatedAttributes = ['first_name', 'last_name'];
 
@@ -32,11 +32,7 @@ class SlaveUserRepository extends EloquentRepository
 
     public function allWithDeleted($with = [])
     {
-        $res = $this->model;
-
-        if (Gate::allows('deleteUser', Session::get('managed_company'))) {
-            $res = $res->withTrashed();
-        }
+        $res = $this->model->withTrashed();
 
         foreach ($with as $relation) {
             $res = $res->with($relation);

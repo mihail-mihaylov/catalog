@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Description of UserI18n
- *
- * @author Nikolay Velchev <nvelchev@neterra.net>,
- */
 namespace App;
 
 use App\Traits\HasTranslation;

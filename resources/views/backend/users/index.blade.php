@@ -64,13 +64,11 @@
                                 </h3>
                             </div>
                             <div class="ibox-tools">
-                                @can('manageGroup', $company)
-                                <button type="button" class="add_group btn btn-custom btn-sm" data-toggle="modal" data-target="#user_module_modal" data-href="{{route('group.create')}}" id="add_group"
-                                data-title="{{ trans('groups.add_new') }}" data-action="{{route('group.create')}}" data-get>
+                                <button type="button" class="add_group btn btn-custom btn-sm" data-toggle="modal" data-target="#user_module_modal" data-href="{{--{{route('group.create')}}--}}" id="add_group"
+                                data-title="{{ trans('groups.add_new') }}" data-action="{{--{{route('group.create')}}--}}" data-get>
                                     <i class="fa fa-plus"></i>&nbsp;
                                     {{trans('groups.add_new')}}
                                 </button>
-                                @endcan
                                 <div class="users_groups_search inline"></div>
                             </div>
                         </div>

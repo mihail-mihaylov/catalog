@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'devices'                             => 'Devices',
     'model'                               => 'Model',
     'identification_number'               => 'Identification number',
     'add_new'                             => 'Add device',

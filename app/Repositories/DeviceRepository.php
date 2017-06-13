@@ -47,7 +47,16 @@ class DeviceRepository extends EloquentRepository
         return $this->model->with('lastGpsEvent');
     }
 
+    public function allWithDeleted($with = [])
+    {
+        $res = $this->model->withTrashed();
 
+        foreach ($with as $relation) {
+            $res = $res->with($relation);
+        }
+
+        return $res->get();
+    }
 
     private function transformGpsTimeColumnsIntoCarbon($gpsEvents)
     {

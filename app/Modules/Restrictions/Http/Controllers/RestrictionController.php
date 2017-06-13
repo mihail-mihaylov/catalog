@@ -9,14 +9,13 @@ use App\Modules\Restrictions\Http\Requests\CreateRestrictionRequest;
 use App\Modules\Restrictions\Http\Requests\UpdateRestrictionRequest;
 use App\Modules\Restrictions\Interfaces\AreaInterface;
 use App\Modules\Restrictions\Interfaces\AreaPointInterface;
-use App\Modules\Restrictions\Interfaces\RestrictionInterface;
+use App\Modules\Restrictions\Repositories\RestrictionRepository;
 use App\Modules\Restrictions\Interfaces\SlaveRestrictionTranslationsInterface;
 use App\Modules\Restrictions\Models\Limit;
 use App\Modules\TrackedObjects\Repositories\TrackedObjectInterface;
 use App\Modules\Users\Repositories\SlaveUserInterface;
 use App\Modules\Violations\Interfaces\ViolationInterface;
 use App\Restriction;
-use App\Traits\SwitchesDatabaseConnection;
 use Faker\Provider\es_AR\Company;
 use Gate;
 use Illuminate\Http\Request;
@@ -24,10 +23,8 @@ use View;
 
 class RestrictionController extends Controller
 {
-    use SwitchesDatabaseConnection;
-
     public function __construct(
-        RestrictionInterface $restrictionRepository,
+        RestrictionRepository $restrictionRepository,
         TrackedObjectInterface $trackedObjectsRepository,
         AreaInterface $areas,
         AreaPointInterface $areaPoints,
@@ -36,8 +33,7 @@ class RestrictionController extends Controller
         SlaveUserInterface $user,
         GroupInterface $groups
     ) {
-        $this->authorize('user');
-        $this->restrictions            = $restrictionRepository;
+        $this->restrictionRepository            = $restrictionRepository;
         $this->trackedObjects          = $trackedObjectsRepository;
         $this->areas                   = $areas;
         $this->areaPoints              = $areaPoints;
@@ -46,7 +42,6 @@ class RestrictionController extends Controller
         $this->restrictionTranslations = $restrictionTranslations;
         $this->user                    = $user;
         $this->groups                  = $groups;
-        $this->company                 = $this->getManagedCompany();
     }
     /**
      * Display a listing of the resource.

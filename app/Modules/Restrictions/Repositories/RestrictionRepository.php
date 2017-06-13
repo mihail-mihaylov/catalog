@@ -1,7 +1,6 @@
 <?php
-namespace App\Modules\Restrictions\Repositories\Eloquent;
+namespace App\Modules\Restrictions\Repositories;
 
-use App\Models\TrackedObject;
 use App\Modules\Restrictions\Interfaces\RestrictionInterface;
 use App\Modules\Restrictions\Models\Area;
 use App\Modules\Restrictions\Models\AreaPoint;
@@ -9,20 +8,19 @@ use App\Modules\Restrictions\Models\Limit;
 use App\Modules\Users\Repositories\Eloquent\EloquentRepository;
 use Illuminate\Http\Request;
 
-class SlaveRestrictionRepository extends EloquentRepository implements RestrictionInterface
+class RestrictionRepository extends EloquentRepository
 {
 
-    public function __construct(Limit $model, Area $area, AreaPoint $areaPoint, TrackedObject $trackedObject)
-    {
+    public function __construct(
+        Limit $model,
+        Area $area,
+        AreaPoint $areaPoint,
+        Device $device
+    ) {
         $this->model         = $model;
         $this->area          = $area;
         $this->areaPoint     = $areaPoint;
-        $this->trackedObject = $trackedObject;
-    }
-
-    public function getManagedCompany()
-    {
-        return $this->model->getManagedCompany();
+        $this->device = $device;
     }
 
     public function getArea()

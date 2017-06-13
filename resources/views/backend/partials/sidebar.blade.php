@@ -80,10 +80,10 @@
                 <ul class="nav nav-second-level collapse">
 
                     <li {{ Request::is('devices') ? 'class=active' : '' }}>
-                        <a href="{{ route('devices.index') }}">
+                        <a href="{{ route('device.index') }}">
                             <i class="fa fa-car"></i>
                             <span class="nav-label">
-                                {{ trans_choice('sidebar.tracked_object', 2) }}
+                                {{ trans('devices.devices') }}
                             </span>
                         </a>
                     </li>

@@ -47,11 +47,22 @@ Route::group(['middleware' => 'auth'], function () {
 
     // Restrictions
     Route::resource('/restrictions', '\App\Modules\Restrictions\Http\Controllers\RestrictionController');
+    Route::get('restriction/restore/{restriction}', [
+        'as' => 'restrictions.restore',
+        'uses' => '\App\Modules\Restrictions\Http\Controllers\RestrictionController@restore'
+    ]);
 
     // Devices
-    Route::resource('devices', '\App\Modules\TrackedObjects\Http\Controllers\DevicesController');
     Route::get('devices/restore/{id}', ['as' => 'devices.restore', 'uses' => '\App\Modules\TrackedObjects\Http\Controllers\DevicesController@restore']);
+    Route::resource('device', '\App\Modules\Devices\Http\Controllers\DeviceController');
 
     // Users
-    Route::resource('user', '\App\Modules\Users\Http\Controllers\UsersController');
+    Route::get('user/restore/{id}', ['as' => 'user.restore', 'uses' => '\App\Modules\Users\Http\Controllers\UsersController@restore']);
+
+    Route::get('group/row_template/{id}', ['as' => 'group.getRow', 'uses' => '\App\Modules\Users\Http\Controllers\GroupsController@getGroupRow']);
+    Route::resource('group', '\App\Modules\Users\Http\Controllers\GroupsController');
+    Route::get('group/restore/{id}', ['as' => 'group.restore', 'uses' => '\App\Modules\Users\Http\Controllers\GroupsController@restore']);
+    Route::get('getEditGroup/{id}', ['as' => 'group.getEdit', 'uses' => '\App\Modules\Users\Http\Controllers\GroupsController@getEditGroup']);
+
+    Route::resource('user', '\App\Modules\Users\Http\Controllers\UserController');
 });

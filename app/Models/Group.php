@@ -1,31 +1,22 @@
 <?php
 
-/**
- * Description of Groups
- *
- * @author Nikolay Velchev <nvelchev@neterra.net>,
- */
+namespace App\Models;
 
-namespace App;
-
-use App\Traits\SwitchesDatabaseConnection;
 use App\Traits\TimezoneAccessors;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Session;
+use Illuminate\Support\Facades\Session;
+//use Session;
 
 class Group extends Model
 {
-    use SwitchesDatabaseConnection,
-        SoftDeletes,
+    use SoftDeletes,
         TimezoneAccessors;
 
     public function __construct($attributes = [])
     {
         parent::__construct($attributes);
-        if (!Session::has('migrating')) {
-            $this->connection = 'slave';
-        }
     }
     protected $translatedAttributes = ['name'];
 
@@ -41,7 +32,7 @@ class Group extends Model
         'deleted_at',
     ];
 
-    protected $fillable = array('company_id', 'created_at', 'updated_at');
+    protected $fillable = array('created_at', 'updated_at');
 
     protected $guarded = array();
 
@@ -60,25 +51,18 @@ class Group extends Model
         return $this->hasMany(GroupI18n::class, 'group_id');
     }
 
-    public function company()
-    {
-        return $this->belongsTo(Company::class, 'company_id');
-    }
-
     public function users()
     {
         return $this->belongsToMany(User::class, 'users_groups', 'group_id', 'user_id');
     }
-
 
     public function usersWithTranslations()
     {
         return $this->users()->withTrashed()->with('translation');
     }
 
-    public function trackedObjects()
+    public function devices()
     {
-        return $this->belongsToMany(TrackedObject::class, 'groups_tracked_objects', 'group_id', 'tracked_object_id')->with('brand');
+        return $this->belongsToMany(Device::class, 'groups_devices', 'group_id', 'device_id');
     }
-
 }

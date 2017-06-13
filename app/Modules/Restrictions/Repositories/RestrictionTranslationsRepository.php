@@ -1,11 +1,11 @@
 <?php
-namespace App\Modules\Restrictions\Repositories\Eloquent;
 
-use App\Modules\Restrictions\Interfaces\SlaveRestrictionTranslationsInterface;
+namespace App\Modules\Restrictions\Repositories;
+
 use App\Modules\Restrictions\Models\LimitI18n;
 use App\Modules\Users\Repositories\Eloquent\EloquentRepository;
 
-class SlaveRestrictionTranslationsRepository extends EloquentRepository implements SlaveRestrictionTranslationsInterface
+class RestrictionTranslationsRepository extends EloquentRepository
 {
     public function __construct(LimitI18n $model)
     {

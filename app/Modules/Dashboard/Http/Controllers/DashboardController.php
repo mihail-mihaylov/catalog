@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Repositories\SlaveGpsEventInterface;
 use App\Modules\Reports\Repositories\Eloquent\TripRepository;
 use App\Modules\SharedTasks\Repositories\Eloquent\SlaveSharedTaskRepository;
-use App\Modules\TrackedObjects\Repositories\Eloquent\DeviceRepository;
+use App\Repositories\DeviceRepository;
 use App\Modules\TrackedObjects\Repositories\Eloquent\TrackedObjectRepository;
 use App\Modules\TrackedObjects\Repositories\SlaveGroupsTrackedObjectsInterface;
 use App\Modules\Users\Repositories\SlaveUserInterface;

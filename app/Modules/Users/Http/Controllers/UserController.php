@@ -2,13 +2,14 @@
 
 namespace App\Modules\Users\Http\Controllers;
 
-use App\Modules\Groups\Repositories\Eloquent\SlaveGroupRepository as SlaveGroup;
+use App\Repositories\GroupRepository;
 use App\Modules\Users\Repositories\Eloquent\SlaveUserI18nRepository;
 use App\Modules\Users\Http\Requests\RestoreUserRequest;
 use App\Modules\Users\Http\Requests\CreateUserRequest;
 use App\Modules\Users\Http\Requests\UpdateUserRequest;
 use App\Modules\Users\Repositories\SlaveUserInterface;
 use App\Modules\Users\Http\Requests\DeleteUserRequest;
+use App\Repositories\UserRepository;
 use App\Traits\SwitchesDatabaseConnection;
 use App\Http\Controllers\AjaxController;
 use App\Http\Repositories\RoleInterface;
@@ -19,19 +20,16 @@ use App\Role;
 use App\User;
 use DB;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
-    use SwitchesDatabaseConnection;
+    public function __construct(
+        UserRepository $userRepository,
+        GroupRepository $groupRepository,
+        SlaveUserI18nRepository $translation
+    ) {
 
-    public function __construct(SlaveUserInterface $slaveUser, Request $request, SlaveGroup $slaveGroup, RoleInterface $role, SlaveUserI18nRepository $translation)
-    {
-        $this->authorize('user');
-
-        $this->slaveUser   = $slaveUser;
-        $this->slaveGroup  = $slaveGroup;
-        $this->roles       = $role;
-        $this->company     = $this->getManagedCompany();
-        // dd(auth()->user()->administrates($this->company), auth()->user()->can('update_company_users'));
+        $this->userRepository   = $userRepository;
+        $this->groupRepository  = $groupRepository;
         $this->translation = $translation;
     }
 
@@ -42,10 +40,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $company = $this->company;
-        $groups  = $this->slaveGroup->allWithDeleted(['translation', 'usersWithTranslations']);
-        $users   = $this->slaveUser->allWithDeleted(['role', 'company', 'translation']);
-        return view('backend.users.index', compact('company', 'groups', 'dropdownCompanies', 'users'));
+        $users   = $this->userRepository->allWithDeleted(['translation']);
+        $groups  = $this->groupRepository->allWithDeleted(['translation', 'usersWithTranslations']);
+
+        return view('backend.users.index', compact('users', 'groups'));
     }
 
     /**
