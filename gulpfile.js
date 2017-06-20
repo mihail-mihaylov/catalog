@@ -320,7 +320,7 @@ elixir(function (mix) {
 
     mix.scripts(['socket/socket.io.event.handler.js'], 'public/js/socket_event_handler.js');
 
-    mix.scripts(['moment.min.js', 'moment-duration-format.js'])
+    mix.scripts(['moment.min.js', 'moment-duration-format.js']);
 
     elixir(function(mix) {
         mix.browserSync(

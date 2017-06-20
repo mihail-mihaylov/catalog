@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="ibox">
-                {!! Form::open(['url' => route('reports.general.report'), 'method' => 'get', 'class' => '']) !!}
+                {!! Form::open(['url' => route('reports.general.report'), 'method' => 'POST', 'class' => '']) !!}
                     <div class="ibox-title">
                         <h5>
                             <i class="fa fa-bar-chart-o"></i>&nbsp;
@@ -32,10 +32,10 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-md-2">
-                                    {!! Form::label('trackedObject', trans_choice('trackedObjects.trackedОbject', 1), ['class' => 'control-label']) !!}
+                                    {!! Form::label('devices', trans('devices.devices'), ['class' => 'control-label']) !!}
                                 </div>
                                 <div class="col-md-5">
-                                    <select class="select-trackedObjects form-control fix-select2" name="deviceId" >
+                                    <select class="select-devices form-control fix-select2" name="deviceId" >
 
                                         <option value="">{{ trans('general.please_choose') }}</option>
                                         @foreach ($devices as $device)
@@ -50,37 +50,38 @@
 
                         <div class="row">
                             <div class="hr-line-dashed "></div>
-                            <div class="form-group" id="lastDate">
+                            <div class="form-group" id="from">
                                 <div class="col-md-2">
-                                    {!! Form::label('lastDate', trans("general.end_date"), ['class' => 'control-label']) !!}
+                                    {!! Form::label('from', trans("general.from"), ['class' => 'control-label']) !!}
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="input-group date" id="generalReportDatepicker">
-                                        {!! Form::text('lastDate', '', ['class' => 'form-control']) !!}
+                                    <div class="input-group date" id="fromDatepicker">
+                                        {!! Form::text('from', '', ['class' => 'form-control']) !!}
                                         <span class="input-group-addon">
                                             <i class="fa fa-calendar"></i>
                                         </span>
                                     </div>
-                                </div>
-                                <div class="hidden input-group date">
-                                    {!! Form::text( 'hiddenLastDate', '', ['class' => 'form-control', 'id' => 'hiddenLastDate']) !!}
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="hr-line-dashed "></div>
-                            <div class="form-group">
+                            <div class="form-group" id="to">
                                 <div class="col-md-2">
-                                    {!! Form::label('periodSlider', trans('general.time_period'), ['class' => 'control-label']) !!}
+                                    {!! Form::label('to', trans("general.to"), ['class' => 'control-label']) !!}
                                 </div>
-                                <div class="col-md-5 controls" data-title="Периода&nbsp;на&nbsp;справката&nbsp;в&nbsp;дни">
-                                    <div id="periodSlider" class="noUiSlider" name="periodSlider" data-max="31" data-default="7"></div>
-                                    <input type="hidden" id="periodInput" name="periodInput">
+                                <div class="col-md-5">
+                                    <div class="input-group date" id="toDatepicker">
+                                        {!! Form::text('to', '', ['class' => 'form-control']) !!}
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div id="periodLabel" class="col-md-1-offset-12" style="font-size: 1.2em"></div>
                             </div>
                         </div>
+
                     </div>
 
                     <div class="ibox-footer">
@@ -104,7 +105,7 @@
     <script type="text/javascript">
         $(document).ready(function()
         {
-            $(".select-trackedObjects").select2({
+            $(".select-devices").select2({
                 width: '100%',
                 language: {
                    "noResults": function(){
@@ -113,62 +114,23 @@
                 }
             });
 
-            $('#generalReportDatepicker').datepicker({
+            $('#fromDatepicker').datepicker({
                 todayBtn: 'linked',
                 calendarWeeks: true,
                 autoclose: true,
                 format: 'yyyy-mm-dd',
-                language: '{{ App::getLocale() }}',
+{{--                language: '{{ App::getLocale() }}',--}}
                 todayHighlight: true
             }).datepicker('setDate', new Date);
 
-            var maxval = 31;
-            var defaultval = 7;
-
-            if($('#periodSlider').attr('data-max'))
-            {
-                maxval = $('#periodSlider').attr('data-max');
-            }
-
-            if($('#periodSlider').attr('data-default'))
-            {
-                defaultval = $('#periodSlider').attr('data-default');
-            }
-
-            var slider = document.getElementById('periodSlider');
-
-            noUiSlider.create(slider, {
-                start: parseInt(defaultval),
-                connect: 'lower',
-                step: 1,
-                range: {
-                    'min':  1,
-                    'max':  parseInt(maxval)
-                }
-            });
-
-            var periodInput = document.getElementById('periodInput'),
-            periodLabel = document.getElementById('periodLabel');
-
-            // When the slider value changes, update the input and span
-            slider.noUiSlider.on('update', function( values, handle ) {
-                if (!handle)
-                {
-                    periodInput.value = parseFloat(values[handle]).toFixed(0);
-                    periodLabel.innerHTML = parseFloat(values[handle]).toFixed(0)+" "+translations.days;
-                }
-            });
-            $("input[name=lastDate]").on('change', function (){
-                // console.log($(this).val());
-                mutateLastDateIntoDateTime($(this).val());
-            });
-
-            var mutateLastDateIntoDateTime = function (date) {
-
-                $('#hiddenLastDate').val($("input[name=lastDate]").val() + ' 23:59:59');
-            }
-
-            mutateLastDateIntoDateTime();
+            $('#toDatepicker').datepicker({
+                todayBtn: 'linked',
+                calendarWeeks: true,
+                autoclose: true,
+                format: 'yyyy-mm-dd',
+{{--                language: '{{ App::getLocale() }}',--}}
+                todayHighlight: true
+            }).datepicker('setDate', new Date);
         });
     </script>
 @endsection

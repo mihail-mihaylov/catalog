@@ -43,10 +43,9 @@ class PoiController extends Controller
      */
     public function create(Request $request)
     {
-        $languages = \Session::get('company_languages');
         $model = $this->poiRepository->newObject();
 
-        $template = view('backend.pois.partials.create')->with(['languages' => $languages, 'model' => $model])->render();
+        $template = view('backend.pois.partials.create')->with(['model' => $model])->render();
 
         return AjaxController::success(['html' => $template]);
     }

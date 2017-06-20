@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\SlaveDevice;
-use App\Traits\SwitchesDatabaseConnection;
+use App;
+use App\Models\Device;
 use App\Traits\TimezoneAccessors;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
@@ -11,6 +11,12 @@ use Session;
 
 class GpsEvent extends Model
 {
+    use TimezoneAccessors;
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
     protected $table = 'gps_events';
     protected $managedCompany = null;
 
@@ -24,11 +30,6 @@ class GpsEvent extends Model
 
     public function device()
     {
-        return $this->belongsTo(Device::class, 'device_id')->with('trips', 'trackedObject');
-    }
-
-    public function trip()
-    {
-        return $this->belongsTo(Trip::class, 'trip_id');
+        return $this->belongsTo(Device::class, 'device_id');
     }
 }

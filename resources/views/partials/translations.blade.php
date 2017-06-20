@@ -60,14 +60,5 @@
         'gps': "{{ trans('general.gps') }}",
         'can': "{{ trans('general.can') }}",
         'run': "{{ trans('general.run') }}",
-
-        // CANBUS reports
-        @foreach (trans('reports.canbus') as $parameter => $details)
-            @if (isset($details['units']))
-                @foreach($details['units'] as $unit_key => $unit_value)
-                    "{{ $parameter . '.' . $unit_key }}": "{{ $unit_value }}",
-                @endforeach
-            @endif
-        @endforeach
     }
 </script>

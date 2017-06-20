@@ -6,7 +6,7 @@ use App\Modules\TrackedObjects\Repositories\DeviceInterface;
 use App\Modules\Users\Repositories\Eloquent\EloquentRepository;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use App\Models\SlaveGpsEvent;
+use App\Models\GpsEvent;
 use Carbon\Carbon;
 use DatePeriod;
 use DateTime;
@@ -14,7 +14,7 @@ use App\Trip;
 use Session;
 use App\Models\Device;
 
-class DeviceRepository extends EloquentRepository implements DeviceInterface
+class DeviceRepository extends EloquentRepository
 {
     protected $model;
 
@@ -222,7 +222,7 @@ class DeviceRepository extends EloquentRepository implements DeviceInterface
         }
 
         if ( ! empty($tripIds)) {
-            $gpsEvents = SlaveGpsEvent::where(function ($query) use ($dateIntervals, $tripIds) {
+            $gpsEvents = GpsEvent::where(function ($query) use ($dateIntervals, $tripIds) {
 
                 $query->whereIn('trip_id', $tripIds);
 

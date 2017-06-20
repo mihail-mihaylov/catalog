@@ -31,7 +31,5 @@
         {!! Html::script('js/define-icons.js') !!}
 
         @yield('javascript')
-        {{--{!! Html::script('js/socket_event_handler.js') !!}--}}
-        {{--{!! Html::script('js/show_notification_violation.js') !!}--}}
     </body>
 </html>

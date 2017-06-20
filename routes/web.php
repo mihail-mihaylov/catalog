@@ -27,7 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
     # General report
     Route::get('/reports/general/trips/{date}/{device_id}', '\App\Modules\Reports\Http\Controllers\GeneralReportController@getTrips');
     Route::get('/reports/general/lastEvent/{device_id}', '\App\Modules\Reports\Http\Controllers\GeneralReportController@getLastEvent');
-    Route::get('/reports/general/report', ['as' => 'reports.general.report', 'uses' => '\App\Modules\Reports\Http\Controllers\GeneralReportController@report']);
+    Route::post('/reports/general/report', ['as' => 'reports.general.report', 'uses' => '\App\Modules\Reports\Http\Controllers\GeneralReportController@report']);
     Route::resource('/reports/general', '\App\Modules\Reports\Http\Controllers\GeneralReportController');
 
     # Poi report

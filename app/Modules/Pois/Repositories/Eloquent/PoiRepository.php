@@ -2,16 +2,16 @@
 
 namespace App\Modules\Pois\Repositories\Eloquent;
 
+use App\Models\PoiPoint;
 use App\Modules\Pois\Repositories\PoiInterface;
 use App\Modules\Users\Repositories\Eloquent\EloquentRepository;
 use App\Models\Poi;
-use App\PoiHistory;
-use App\PoiPoint;
+use App\Models\PoiHistory;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
-class PoiRepository extends EloquentRepository implements PoiInterface
+class PoiRepository extends EloquentRepository
 {
     protected $model;
 

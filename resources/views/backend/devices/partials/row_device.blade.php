@@ -1,7 +1,6 @@
 <tr id='device-row-{{ $device->id }}' class="gradeX">
     {{--<td class="pull-left">{{$device->id}}</td>--}}
     <td></td>
-    <td class="text-left">{{{ $device->deviceModel->name }}}</td>
     <td class="text-left">{{{ $device->identification_number }}}</td>
     <td class="text-left">
         @if($device->deleted_at == null)

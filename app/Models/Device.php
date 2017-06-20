@@ -2,38 +2,21 @@
 
 namespace App\Models;
 
-use App\Models\DeviceModel;
 use App\Models\GpsEvent;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Device extends Model
 {
-
     use SoftDeletes;
 
     protected $table = 'devices';
-    public $managedCompany = null;
-
-    /**
-     * The guarded model fields, which cannot be filled-in
-     * @var array
-     */
-    protected $guarded  = [];
     protected $fillable = [
-        'device_model_id',
         'identification_number'
     ];
-
-    public function deviceModel()
-    {
-        return $this->belongsTo(DeviceModel::class);
-    }
-
-    public function trips()
-    {
-        return $this->hasMany(Trip::class);
-    }
+    public $casts = [
+        'name' => 'array'
+    ];
 
     public function gpsEvents()
     {
@@ -43,5 +26,10 @@ class Device extends Model
     public function lastGpsEvent()
     {
         return $this->belongsTo(GpsEvent::class, 'last_gps_event_id');
+    }
+
+    public function getNameAttribute($name)
+    {
+        return ((array)json_decode($name))[env('APP_LANG')];
     }
 }

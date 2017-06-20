@@ -1,9 +1,5 @@
 <div class="tabs-container">
     <form class="form-horizontal" data-submit method='POST' data-table-name="pois_table" action="{{URL::route('pois.store')}}" >
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-        @include('backend.providers.compose_translation_tabs_create')
-
         <div class="form-group">
             <label class="col-sm-2 control-label" name="icon">{{ trans('poi.icon') }}</label>
             <div class="col-sm-10">

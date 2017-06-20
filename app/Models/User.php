@@ -29,9 +29,8 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     }
 
     protected $fillable = [
-        'company_id', 'email', 'role_id', 'password', 'phone', 'master_user_id',
-        'remember_token', 'created_at', 'deleted_at', 'updated_at', 'last_login', 
-        'timezone_id'
+        'email', 'role_id', 'password', 'remember_token', 'created_at', 'deleted_at', 'updated_at',
+        'firstname', 'lastname'
     ];
 
     /**
@@ -51,27 +50,4 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var string
      */
     protected $table   = 'users';
-
-    // protected $with = ['role'];
-
-    public function userI18n()
-    {
-        return $this->hasMany(UserI18n::class);
-    }
-
-    public function translations()
-    {
-        return $this->hasMany(UserI18n::class);
-    }
-
-    public function translation()
-    {
-        return $this->hasMany(UserI18n::class, 'user_id')
-            ->where('language_id', '=', Session::get('locale_id', 1));
-    }
-
-    public function timezone()
-    {
-        return $this->belongsTo(Timezone::class, 'timezone_id');
-    }
 }

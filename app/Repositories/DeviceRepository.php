@@ -6,7 +6,7 @@ use App\Modules\TrackedObjects\Repositories\DeviceInterface;
 use App\Modules\Users\Repositories\Eloquent\EloquentRepository;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use App\Models\SlaveGpsEvent;
+use App\Models\GpsEvent;
 use Carbon\Carbon;
 use DatePeriod;
 use DateTime;

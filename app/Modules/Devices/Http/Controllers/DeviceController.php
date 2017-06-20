@@ -41,7 +41,7 @@ class DeviceController extends Controller
      */
     public function index()
     {
-        $devices = $this->deviceRepository->allWithDeleted(['deviceModel']);
+        $devices = $this->deviceRepository->allWithDeleted();
 
         return view('backend.devices.index', compact('user', 'devices'));
     }
@@ -119,6 +119,7 @@ class DeviceController extends Controller
 
     public function destroy($id)
     {
+        dd('dotuk');
         $device = $this->slaveDevice->findWithDeletes($id);
 
         $device->delete($id);

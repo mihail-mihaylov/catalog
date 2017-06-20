@@ -2,7 +2,6 @@
     <thead>
         <tr class="gradeX">
             <th></th>
-            <th>{{trans('general.model')}}</th>
             <th>{{trans('general.identification_number')}}</th>
             <th>{{trans('general.actions')}}</th>
         </tr>
@@ -10,7 +9,6 @@
     <tfoot>
         <tr class="gradeX">
             <th></th>
-            <th>{{trans('general.model')}}</th>
             <th>{{trans('general.identification_number')}}</th>
             <th>{{trans('general.actions')}}</th>
         </tr>

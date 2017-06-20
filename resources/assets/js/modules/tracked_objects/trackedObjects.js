@@ -54,7 +54,7 @@ $(function (){
     //     var action = form.attr('action');
     //     requester.post(action, null, data).then(function (success) {
     //         var html = $(success.html);
-    //         $('#trackedObjectsTable tr:last').after(html);
+    //         $('#devicesTable tr:last').after(html);
     //         closeModal();
     //         ScrollToElement('#' + html.attr('id'), 1000);
     //     }, function (error) {

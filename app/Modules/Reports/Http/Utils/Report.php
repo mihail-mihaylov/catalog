@@ -3,7 +3,7 @@
 namespace App\Modules\Reports\Http\Utils;
 
 use App;
-use App\Models\SlaveGpsEvent;
+use App\Models\GpsEvent;
 use App\Modules\Reports\Http\Objects\GeneralReport;
 use App\Modules\Reports\Http\Objects\GpsPoint;
 use App\Modules\Reports\Http\Objects\Trip as Trip;
@@ -327,7 +327,7 @@ class Report
             }
 
             // Get MaxSpeed
-            if ($gpsPoint instanceof SlaveGpsEvent) {
+            if ($gpsPoint instanceof GpsEvent) {
                 if ($gpsPoint->speed > $maxSpeed) {
                     $maxSpeed = $gpsPoint->speed;
                 }
@@ -437,7 +437,7 @@ class Report
         // dd($gpsPoints);
         foreach ($gpsPoints as $key => $gpsPoint) {
 
-            if ($gpsPoint instanceof SlaveGpsEvent) {
+            if ($gpsPoint instanceof GpsEvent) {
                 if ($gpsPoint->speed > $maxSpeed) {
                     $maxSpeed = $gpsPoint->speed;
                 }
@@ -494,7 +494,7 @@ class Report
     public static function getTotalDistance($firstPoint, $lastPoint)
     {
         // dd($firstPoint, $lastPoint);
-        if ($firstPoint instanceof SlaveGpsEvent && $lastPoint instanceof SlaveGpsEvent) {
+        if ($firstPoint instanceof GpsEvent && $lastPoint instanceof GpsEvent) {
             return ($lastPoint->mileage - $firstPoint->mileage);
         } else {
             // dd($firstPoint, $lastPoint);

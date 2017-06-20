@@ -43,6 +43,7 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         $devicesLastData = $this->deviceRepository->getAllWithLastData()->get();
+//        dd($devicesLastData->first()->name);
 
         // Get last visited pois
         // $lastVisited = $this->slavePoiRepository->getLastVisited();
