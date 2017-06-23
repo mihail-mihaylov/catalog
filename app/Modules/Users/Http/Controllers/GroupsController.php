@@ -2,23 +2,20 @@
 
 namespace App\Modules\Users\Http\Controllers;
 
-use App\Company;
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Controller;
 use App\Modules\Groups\Repositories\Eloquent\SlaveGroupRepository as Group;
 use App\Modules\Groups\Requests\CreateGroupRequest;
 use App\Modules\Groups\Requests\UpdateGroupRequest;
+use App\Repositories\GroupRepository;
 use Illuminate\Http\Request;
 use Session;
 
 class GroupsController extends Controller
 {
-    public function __construct(Group $groupRepository)
+    public function __construct(GroupRepository $groupRepository)
     {
-        $this->authorize('user');
         $this->groups  = $groupRepository;
-        $this->company = $this->groups->getManagedCompany();
-        // dd($this->groupsTranslations);
     }
     /**
      * Display a listing of the resource.

@@ -2,24 +2,14 @@
 
 namespace App\Modules\Devices\Http\Controllers;
 
-use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Controller;
 use App\Modules\TrackedObjects\Http\Requests\UpdateDeviceRequest;
 use App\Modules\TrackedObjects\Http\Requests\CreateDeviceRequest;
-use App\Modules\Installer\Http\Requests\CreateUpdateDeviceInputRequest;
 use App\Repositories\DeviceRepository;
-use App\Modules\TrackedObjects\Repositories\SlaveDeviceModelInterface as SlaveDeviceModel;
-use App\Modules\TrackedObjects\Repositories\TrackedObjectInterface as SlaveTrackedObject;
-use App\Modules\Users\Repositories\SlaveUserInterface as SlaveUser;
-//use Auth;
-use App\Traits\SwitchesDatabaseConnection;
-use Input;
-use App\InputType;
-use App\InputMeasurementUnit;
+
+use App\Repositories\GroupRepository;
 use App\Http\Controllers\AjaxController as Ajax;
 use DB;
-use App\Modules\TrackedObjects\Repositories\Eloquent\DeviceInputRepository;
-use App\Modules\Installer\Models\DeviceInput;
 
 //use Redirect;
 //use Request;
@@ -27,11 +17,14 @@ use App\Modules\Installer\Models\DeviceInput;
 class DeviceController extends Controller
 {
     private $deviceRepository;
+    private $groupRepository;
 
     public function __construct(
-        DeviceRepository $deviceRepository
+        DeviceRepository $deviceRepository,
+        GroupRepository $groupRepository
     ) {
         $this->deviceRepository = $deviceRepository;
+        $this->groupRepository = $groupRepository;
     }
 
     /**
@@ -42,8 +35,9 @@ class DeviceController extends Controller
     public function index()
     {
         $devices = $this->deviceRepository->allWithDeleted();
+        $groups = $this->groupRepository->allWithDeleted();
 
-        return view('backend.devices.index', compact('user', 'devices'));
+        return view('backend.devices.index', compact('groups', 'devices'));
     }
 
     /**

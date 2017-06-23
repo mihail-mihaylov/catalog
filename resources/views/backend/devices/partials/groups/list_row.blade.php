@@ -3,7 +3,7 @@
     <td>
         {{ $group->name }}
     </td>
-    <td>@include('backend.users.partials.groups.list_group_users', ['group' => $group])</td>
+    <td>@include('backend.devices.partials.groups.list_group_devices', ['group' => $group])</td>
     <td>
         @if($group->deleted_at)
             <button type="button" class="btn btn-xs btn-success" data-action="{{ route('group.restore', ['id' => $group->id]) }}" data-update>

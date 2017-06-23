@@ -37,22 +37,13 @@ var datatable = $('.data-table').dataTable({
         }
 });
 
-$("#dashboard_shared_tasks_list .dataTables_filter").appendTo($(".dashboard_shared_tasks_search"));
-$("#tracked_objects_to_list .dataTables_filter").appendTo($(".tracked_objects_search"));
-$("#tracked_objects_devices_list .dataTables_filter").appendTo($(".devices_search"));
+$("#devices_list .dataTables_filter").appendTo($(".devices_search"));
 $("#users_list .dataTables_filter").appendTo($(".users_search"));
 $("#users_groups_list .dataTables_filter").appendTo($(".users_groups_search"));
-$("#trips_reports_list .dataTables_filter").appendTo($(".trips_reports_search"));
 $("#restrictions_list .dataTables_filter").appendTo($(".restrictions_search"));
 $("#violations_list .dataTables_filter").appendTo($(".violations_search"));
-$("#drivers_list .dataTables_filter").appendTo($(".drivers_search"));
-$("#personal_tasks_list .dataTables_filter").appendTo($(".personal_tasks_search"));
-$("#all_tasks_list .dataTables_filter").appendTo($(".all_tasks_search"));
-$("#personal_reminders_list .dataTables_filter").appendTo($(".personal_reminders_search"));
-$("#all_reminders_list .dataTables_filter").appendTo($(".all_reminders_search"));
 $("#groups_list .dataTables_filter").appendTo($(".groups_search"));
 $("#pois_list .dataTables_filter").appendTo($(".pois_search"));
-$("#companies_list .dataTables_filter").appendTo($(".companies_search"));
 $("#poi_report_list .dataTables_filter").appendTo($(".poi_report_search"));
 
 

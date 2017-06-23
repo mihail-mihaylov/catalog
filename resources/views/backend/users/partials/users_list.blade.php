@@ -4,9 +4,7 @@
             <th></th>
             <th class="text-left">{{trans('general.name')}}</th>
             <th class="text-left">{{trans('general.email')}}</th>
-            <th class="text-left">{{trans('general.phone')}}</th>
             <th class="text-left">{{trans('general.user_role')}}</th>
-            <th class="text-left">{{trans('general.last_login')}}</th>
             <th class="text-left">{{trans('general.actions')}}</th>
         </tr>
     </thead>
@@ -15,9 +13,7 @@
             <th></th>
             <th class="text-left">{{trans('general.name')}}</th>
             <th class="text-left">{{trans('general.email')}}</th>
-            <th class="text-left">{{trans('general.phone')}}</th>
             <th class="text-left">{{trans('general.user_role')}}</th>
-            <th class="text-left">{{trans('general.last_login')}}</th>
             <th class="text-left">{{trans('general.actions')}}</th>
         </tr>
     </tfoot>

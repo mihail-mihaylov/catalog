@@ -1,4 +1,3 @@
-@if(( ! auth()->user()->owns(Session::get('managed_company'))))
     @forelse($group->trackedObjects as $trackedObject)
 
         @if($trackedObject->deleted_at != null)

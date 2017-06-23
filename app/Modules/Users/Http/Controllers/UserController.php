@@ -7,16 +7,12 @@ use App\Modules\Users\Repositories\Eloquent\SlaveUserI18nRepository;
 use App\Modules\Users\Http\Requests\RestoreUserRequest;
 use App\Modules\Users\Http\Requests\CreateUserRequest;
 use App\Modules\Users\Http\Requests\UpdateUserRequest;
-use App\Modules\Users\Repositories\SlaveUserInterface;
 use App\Modules\Users\Http\Requests\DeleteUserRequest;
 use App\Repositories\UserRepository;
-use App\Traits\SwitchesDatabaseConnection;
 use App\Http\Controllers\AjaxController;
-use App\Http\Repositories\RoleInterface;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Company;
-use App\Role;
+use App\Models\Role;
 use App\User;
 use DB;
 
@@ -40,8 +36,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users   = $this->userRepository->allWithDeleted(['translation']);
-        $groups  = $this->groupRepository->allWithDeleted(['translation', 'usersWithTranslations']);
+        $users   = $this->userRepository->allWithDeleted();
+        $groups  = $this->groupRepository->allWithDeleted();
 
         return view('backend.users.index', compact('users', 'groups'));
     }

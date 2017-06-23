@@ -24,10 +24,4 @@ class GroupRepository extends EloquentRepository
 
         return $res->get();
     }
-
-    public function withTranslations()
-    {
-        return $this->model->with('translations');
-    }
-
 }

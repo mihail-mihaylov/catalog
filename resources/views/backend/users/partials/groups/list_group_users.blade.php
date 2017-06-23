@@ -1,10 +1,10 @@
-@forelse($group->usersWithTranslations as $user)
+@forelse($group->users as $user)
     @if($user->deleted_at != null)
         <span class="btn btn-white ">
             <label class="badge badge-danger">
                 &nbsp;
-                {{{ $user->translation->first()->first_name }}}
-                {{{ $user->translation->first()->last_name }}}
+                {{{ $user->firstname }}}
+                {{{ $user->lastname }}}
                 &nbsp;
             </label>
         </span>
@@ -12,8 +12,8 @@
         <span class="btn btn-white ">
             <label class="badge badge-success">
                 &nbsp;
-                {{{ $user->translation->first()->first_name }}}
-                {{{ $user->translation->first()->last_name }}}
+                {{{ $user->firstname }}}
+                {{{ $user->lastname }}}
                 &nbsp;
             </label>
         </span>

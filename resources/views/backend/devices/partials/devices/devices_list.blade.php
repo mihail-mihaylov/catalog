@@ -4,7 +4,6 @@
             <th></th>
             <th>{{trans('general.model')}}</th>
             <th>{{trans('general.identification_number')}}</th>
-            <th>{{trans('trackedObjects.tracked_object')}}</th>
             <th>{{trans('general.actions')}}</th>
         </tr>
     </thead>
@@ -13,13 +12,12 @@
             <th></th>
             <th>{{trans('general.model')}}</th>
             <th>{{trans('general.identification_number')}}</th>
-            <th>{{trans('trackedObjects.tracked_object')}}</th>
             <th>{{trans('general.actions')}}</th>
         </tr>
     </tfoot>
     <tbody>
         @foreach ($devices as $device)
-            @include('backend.devices.partials.row_device', ['device' => $device])
+            @include('backend.devices.partials.devices.row_device', ['device' => $device])
         @endforeach
     </tbody>
 </table>

@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\Group;
+use App\Models\Role;
 use App\Traits\HasCompany;
 use App\Traits\HasModules;
 use App\Traits\HasRoles;
@@ -18,6 +20,9 @@ use Session;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
 {
+    const ADMIN = 1;
+    const USER = 2;
+
     use Authenticatable,
         Authorizable,
         CanResetPassword,
@@ -50,4 +55,24 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var string
      */
     protected $table   = 'users';
+
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class, 'users_groups', 'user_id', 'group_id');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
+    public function getFirstnameAttribute($name)
+    {
+        return ((array)json_decode($name))[env('APP_LANG')];
+    }
+
+    public function getLastnameAttribute($name)
+    {
+        return ((array)json_decode($name))[env('APP_LANG')];
+    }
 }

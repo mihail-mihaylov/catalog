@@ -1,27 +1,20 @@
 <tr class="gradeX" id="user_{{ $user->id }}">
     <td></td>
     <td>
-        {{{ $user->translation->isEmpty() ? null : $user->translation->first()->first_name }}}
-        {{{ $user->translation->isEmpty() ? null : $user->translation->first()->last_name }}}
+        {{{ $user->firstname }}}
+        {{{ $user->lastname }}}
     </td>
     <td>
         {{ $user->email }}
     </td>
     <td>
-        {{ $user->phone }}
-    </td>
-    <td>
-{{--        {{ $user->role->translation->first()->name }}--}}
-    </td>
-    <td class="center">
-        {{ $user->last_login }}
+        {{ $user->role->name }}
     </td>
     <td class="pull-left">
             @if($user->deleted_at !== null)
                 <button type="button" class="btn btn-xs btn-success restore_user" data-action="{{
                     route('user.restore', [
-                        'id' => $user->id,
-                        'companyId' => $user->company->id,
+                        'id' => $user->id
                     ]) }}" data-update>
                     <i class="fa fa-refresh"></i>
                     {{trans('general.restore')}}
