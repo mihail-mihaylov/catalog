@@ -1,6 +1,6 @@
 $(function() {
 
-var map, points=[], allpoints=[], allpolylines=[], polygroup, pointgroup, allpointsgroup, bounds, drawnPois, all30thpoints=[], all30thpointsgroup, all10thpointsgroup, all10thpoints=[], idlingDonut = false, trips = [];
+var map, bounds, drawnPois, trip = [];
 var deviceId = $('.device_id').attr('device-id');
 var state = 0;
 var visible_trips = [];
@@ -78,48 +78,14 @@ var generalreportstable = $('#generalreportstable').dataTable({
 $("#general_reports_trips_list .dataTables_filter").appendTo($(".general_reports_trips_search"));
 $("#general_reports_list .dataTables_filter").appendTo($(".general_reports_search"));
 
-
-var polyColors = new Array("#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565", "#1ab394", "#f8ac59", "#23c6c8", "#1c84c6", "#ed5565");
-
-// var polyColors = ['#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d', '#dc4756', '#14edc1', '#fce652', '#57f7f9', '#1b618d'];
-
-var polyBadges = new Array("danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger", "primary", "warning", "info", "success", "danger");
-
 $(document).ready(function(){
 
     mapper = app.mapper.load('map', false);
     mapper.toggleFullscreenControl(true);
     mapper.toggleMeasureControl(true);
 
-    mapper.map.on('zoomend', function()
-    {
-        var zoom = mapper.map.getZoom();
-        switch (true) {
-            case (0 <= zoom && zoom < 8):
-                state = 200;
-                break;
-            case (8 <= zoom && zoom < 10):
-                state = 100;
-                break;
-            case (10 <= zoom && zoom < 12):
-                state = 50;
-                break;
-            case (12 <= zoom && zoom < 14):
-                state = 10;
-                break;
-            case (14 <= zoom && zoom < 16):
-                state = 5;
-                break;
-            case (16 <= zoom && zoom <= 18):
-                state = 2;
-                break;
-        }
-        redrawMotionPoints();
-    });
-
     drawnPois = new L.layerGroup();
     bounds = new L.LatLngBounds();
-    // getAddresses('generalreportstable', generalreportstable);
 
     var switch_elem = document.querySelector('#showpois');
     var switch_init = new Switchery(switch_elem);
@@ -154,9 +120,7 @@ $(document).ready(function(){
         // Get the trip date from the id attribute of the link
         var tripdate = $(this).attr('tripdate');
 
-        // console.log(deviceId);
-        loadTrips(tripdate, deviceId);
-        reloadStats(tripdate);
+        loadTrip(tripdate, deviceId);
 
         // Scroll to the map
         $('html, body').animate({
@@ -165,41 +129,8 @@ $(document).ready(function(){
 
     });
 
-    $(document).on('change', '#check_all_trips',function(e)
-    {
-        if($('#check_all_trips').prop('checked'))
-        {
-            // Clear all data from map
-            clearObjects();
-            mapper.clearMarkers();
-
-            // Load all trips
-            $("input.trips-visibility", tripstable.fnGetNodes()).each(function(){
-                drawTrip(trips[$(this).attr('tripNumber')]['trip'],$(this).attr('tripNumber'));
-            });
-
-            tripstable.$('input.trips-visibility').prop('checked', true);
-        } else {
-            // Clear all data from map
-            clearObjects();
-            mapper.clearMarkers();
-            tripstable.$('input.trips-visibility').prop('checked', false);
-        }
-    });
-
-    $(document).on('change', "input.trips-visibility", function(e)
-    {
-        if ($(this).prop('checked'))
-        {
-            drawTrip(trips[$(this).attr('tripNumber')]['trip'], $(this).attr('tripNumber'));
-        }
-        else
-        {
-            removeTripFromMap($(this).attr('tripNumber'));
-        }
-    });
-
     // Load first day if exists, if not - load last position
+    console.log($('.change-map-to').first().length);
     if($('.change-map-to').first().length)
     {
         $('.change-map-to').first().click();
@@ -210,38 +141,22 @@ $(document).ready(function(){
     }
 });
 
-function loadTrips(tripdate, deviceId)
+function loadTrip(tripdate, deviceId)
 {
-    // add spinner while loading
-    $("table#tripstable tbody").html("<tr><td colspan='9 text-center'><div class='sk-spinner sk-spinner-three-bounce'><div class='sk-bounce1'></div><div class='sk-bounce2'></div><div class='sk-bounce3'></div></div></td></tr>");
-
     // Clear all data from map
-    clearObjects();
+    removeTripFromMap();
     mapper.clearMarkers();
 
     // Get trips by day
     requester.get('/reports/general/trips/'+tripdate+'/'+deviceId).then(function (data)
     {
-        // Clear table and map before reloading the new trips
-        tripstable.fnClearTable();
-        var tripNumber = 1;
-        trips = [];
-
-        // Iterating the trips
-        $.each(data.trips, function(i, trip)
-        {
-            loadTrip(trip, tripdate, tripNumber);
-            tripNumber++;
-        });
+        drawTrip(data.events);
 
         // Fit bounds after trip has loaded
         setTimeout(function()
             {
                 mapper.map.fitBounds(bounds, { padding: [50, 50] });
             }, 250);
-
-        // Add geoaddresses to columns
-        // getAddresses('tripstable', tripstable);
     },
     function (httperror) {
 
@@ -252,290 +167,54 @@ function loadTrips(tripdate, deviceId)
     });
 }
 
-function loadTrip(trip, tripdate, tripNumber)
+function drawTrip(events)
 {
-    // Undefined variables handling
-    if (trip.end_time == null) {
-        trip.end_time = "-";
-    }
+    trip = [];
+    trip['polyline_points'] = [];
+    trip['polyline'] = null;
+    trip['first_last_points'] = [];
+    trip['first_last_points_layer'] = null;
+    trip['drawn'] = true;
 
-    if (trip.driver == null) {
-        trip.driver = "-";
-    } else {
-        trip.driver = trip.driver.translation[0].first_name + ' ' + trip.driver.translation[0].last_name
-    }
-
-    if (trip.translation[0]) {
-        trip.start_address = trip.translation[0].start_address;
-        trip.end_address = trip.translation[0].end_address;
-    } else {
-        trip.start_address = '-';
-        trip.end_address = '-';
-    }
-
-    if (trip.distance == null) {
-        trip.distance = '0.0';
-    }
-
-    if (trip.distance_can == null) {
-        trip.distance = '0.0';
-    }
-
-
-    var row = "";
-    drawTrip(trip, tripNumber);
-
-    //Adding row to the trips table
-    tripstable.fnAddData([
-        null,
-        '<input type="checkbox" checked data-tripdate="' + tripdate + '" tripNumber="' + tripNumber + '" class="trips-visibility" />',
-        '<span class="badge badge-' + polyBadges[tripNumber] + '">' + tripNumber + '</span>',
-        trip.driver,
-        toDate(trip.start_time, 'HH:mm') + ' ' + translations.hours,
-        toDate(trip.end_time, 'HH:mm') + ' ' + translations.hours,
-        getTripTravelTime(trip) + ' ' + translations.hours,
-        trip.start_address,
-        trip.end_address,
-        (parseFloat(trip.distance)).toFixed(1) + ' ' + translations.km,
-        (parseFloat(trip.distance_can)).toFixed(1) + ' ' + translations.km
-    ]);
-}
-
-function drawTrip(trip, tripNumber)
-{
-    console.log(trip);
-    trips[tripNumber] = [];
-    trips[tripNumber]['trip'] = trip;
-    trips[tripNumber]['motion_points'] = [];
-    // trips[tripNumber]['motion_points']['all_points'] = [];
-    // trips[tripNumber]['motion_points']['all_points_layer'] = null;
-    trips[tripNumber]['motion_points']['every_2th_point'] = [];
-    trips[tripNumber]['motion_points']['every_2th_point_layer'] = null;
-    trips[tripNumber]['motion_points']['every_5th_point'] = [];
-    trips[tripNumber]['motion_points']['every_5th_point_layer'] = null;
-    trips[tripNumber]['motion_points']['every_10th_point'] = [];
-    trips[tripNumber]['motion_points']['every_10th_point_layer'] = null;
-    trips[tripNumber]['motion_points']['every_30th_point'] = [];
-    trips[tripNumber]['motion_points']['every_30th_point_layer'] = null;
-    trips[tripNumber]['motion_points']['every_50th_point'] = [];
-    trips[tripNumber]['motion_points']['every_50th_point_layer'] = null;
-    trips[tripNumber]['motion_points']['every_100th_point'] = [];
-    trips[tripNumber]['motion_points']['every_100th_point_layer'] = null;
-    trips[tripNumber]['motion_points']['every_200th_point'] = [];
-    trips[tripNumber]['motion_points']['every_200th_point_layer'] = null;
-    trips[tripNumber]['motion_points_layer'] = null;
-    trips[tripNumber]['stop_points'] = [];
-    trips[tripNumber]['stop_points_layer'] = null;
-    trips[tripNumber]['rest_points'] = [];
-    trips[tripNumber]['rest_points_layer'] = null;
-    trips[tripNumber]['first_last_points'] = [];
-    trips[tripNumber]['first_last_points_layer'] = null;
-    trips[tripNumber]['polyline_points'] = [];
-    trips[tripNumber]['polyline'] = null;
-    trips[tripNumber]['drawn'] = true;
-
-    $.each(trip.gps_events, function(gpsEventNumber, gpsEvent)
+    $.each(events, function(gpsEventNumber, gpsEvent)
     {
         var location = new L.LatLng(gpsEvent.latitude, gpsEvent.longitude);
 
         // Push location to polyline_points array
-        trips[tripNumber]['polyline_points'].push(location);
-
+        trip['polyline_points'].push(location);
         bounds.extend(location);
-        assignMarker(gpsEventNumber, gpsEvent, tripNumber, trip, location);
+        assignMarker(gpsEventNumber, trip, location, events, gpsEvent);
     });
 
-    var polyline = new L.Polyline(trips[tripNumber]['polyline_points'], {
-        color: polyColors[tripNumber],
+    var polyline = new L.Polyline(trip['polyline_points'], {
+        color: "#ed5565",
         weight: 6,
         opacity: 1,
         smoothFactor: 1
     });
 
-
-    // Assign label
-    var label = "<strong>"+translations.course_number+" "+tripNumber+"</strong><br/>";
-
-    label += translations.tookoff + ": " + toDate(trip.start_time, 'D.MM.YYYY H:mm') + "<br/>";
-    label += translations.arrivedat + ": " + toDate(trip.end_time, 'D.MM.YYYY H:mm') + "<br/>";
-    label += translations.run + "<sup>" + translations.gps + "</sup>: " + parseFloat(trip.distance).toFixed(1) + " " + translations.km + "<br/>";
-    label += translations.run + "<sup>" + translations.can + "</sup>: " + parseFloat(trip.distance_can).toFixed(1) + " " + translations.km + "<br/>";
-    label += translations.driver + ": " + trip.driver;
-
-
-    polyline.bindLabel(label);
-
     // Add polyline to the global polylines array
-    trips[tripNumber]['polyline'] = polyline;
+    trip['polyline'] = polyline;
 
     // Create markers groups from the arrays
-    trips[tripNumber]['first_last_points_layer'] = L.layerGroup(trips[tripNumber]['first_last_points']);
-    trips[tripNumber]['rest_points_layer'] = L.layerGroup(trips[tripNumber]['rest_points']);
-    trips[tripNumber]['stop_points_layer'] = L.layerGroup(trips[tripNumber]['stop_points']);
-    // trips[tripNumber]['motion_points']['all_points_layer'] =
-    //     L.layerGroup(trips[tripNumber]['motion_points']['all_points']);
-
-
-    trips[tripNumber]['motion_points']['every_2th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_2th_point']);
-
-    trips[tripNumber]['motion_points']['every_5th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_5th_point']);
-
-    trips[tripNumber]['motion_points']['every_10th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_10th_point']);
-
-    trips[tripNumber]['motion_points']['every_30th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_30th_point']);
-
-    trips[tripNumber]['motion_points']['every_50th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_50th_point']);
-
-    trips[tripNumber]['motion_points']['every_100th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_100th_point']);
-
-    trips[tripNumber]['motion_points']['every_200th_point_layer'] =
-        L.layerGroup(trips[tripNumber]['motion_points']['every_200th_point']);
-
+    trip['first_last_points_layer'] = L.layerGroup(trip['first_last_points']);
     // Add polyline to map
     mapper.map.addLayer(polyline);
 
     // Add the points group to the map
-    mapper.map.addLayer(trips[tripNumber]['first_last_points_layer']);
-    mapper.map.addLayer(trips[tripNumber]['rest_points_layer']);
-    mapper.map.addLayer(trips[tripNumber]['stop_points_layer']);
+    mapper.map.addLayer(trip['first_last_points_layer']);
+}
 
-
-    var zoom = mapper.map.getZoom();
-    switch (true) {
-        case (0 <= zoom && zoom < 8):
-            mapper.map.addLayer(trips[tripNumber]['motion_points']['every_200th_point_layer']);
-            break;
-        case (8 <= zoom && zoom < 10):
-            mapper.map.addLayer(trips[tripNumber]['motion_points']['every_100th_point_layer']);
-            break;
-        case (10 <= zoom && zoom < 12):
-            mapper.map.addLayer(trips[tripNumber]['motion_points']['every_50th_point_layer']);
-            break;
-        case (12 <= zoom && zoom < 14):
-            mapper.map.addLayer(trips[tripNumber]['motion_points']['every_10th_point_layer']);
-            break;
-        case (14 <= zoom && zoom < 16):
-            mapper.map.addLayer(trips[tripNumber]['motion_points']['every_5th_point_layer']);
-            break;
-        case (16 <= zoom && zoom <= 18):
-            mapper.map.addLayer(trips[tripNumber]['motion_points']['every_2th_point_layer']);
-            break;
+function removeTripFromMap()
+{
+    if (trip['polyline'] != undefined) {
+        mapper.map.removeLayer(trip['first_last_points_layer']);
+        mapper.map.removeLayer(trip['polyline']);
+        trip['drawn'] = false;
     }
 }
 
-function removeTripFromMap(tripNumber)
-{
-    mapper.map.removeLayer(trips[tripNumber]['polyline']);
-    mapper.map.removeLayer(trips[tripNumber]['first_last_points_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['rest_points_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['stop_points_layer']);
-    // mapper.map.removeLayer(trips[tripNumber]['motion_points']['all_points_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_2th_point_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_5th_point_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_10th_point_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_30th_point_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_50th_point_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_100th_point_layer']);
-    mapper.map.removeLayer(trips[tripNumber]['motion_points']['every_200th_point_layer']);
-    trips[tripNumber]['drawn'] = false;
-}
-
-function redrawMotionPoints()
-{
-    if(trips.length > 0)
-    {
-        for(var n in trips){
-            if(trips[n]['drawn'])
-            {
-                if(state == 200)
-                {
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.addLayer(trips[n]['motion_points']['every_200th_point_layer']);
-
-                }
-
-                if(state == 100)
-                {
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.addLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_200th_point_layer']);
-                }
-
-                if(state == 50)
-                {
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.addLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_200th_point_layer']);
-                }
-
-                if(state == 30)
-                {
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.addLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_200th_point_layer']);
-                }
-
-                if(state == 10)
-                {
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.addLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_200th_point_layer']);
-                }
-
-                if(state == 5)
-                {
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.addLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_200th_point_layer']);
-                }
-
-                if(state == 2)
-                {
-                    mapper.map.addLayer(trips[n]['motion_points']['every_2th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_5th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_10th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_30th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_50th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_100th_point_layer']);
-                    mapper.map.removeLayer(trips[n]['motion_points']['every_200th_point_layer']);
-                }
-            }
-        }
-    }
-}
-
-function assignMarker(gpsEventNumber, gpsEvent, tripNumber, trip, location)
+function assignMarker(gpsEventNumber, trip, location, events, gpsEvent)
 {
     if(gpsEventNumber == 0)
     {
@@ -543,186 +222,18 @@ function assignMarker(gpsEventNumber, gpsEvent, tripNumber, trip, location)
             icon: begin_trip,
             zIndexOffset: 1300
         });
-        firstpoint.bindLabel(createLabel(tripNumber, gpsEvent, trip));
-        trips[tripNumber]['first_last_points'].push(firstpoint);
+        getAddresses(gpsEvent.latitude, gpsEvent.longitude, firstpoint);
+        trip['first_last_points'].push(firstpoint);
     }
-    else if(gpsEventNumber == trip.gps_events.length - 1)
+    else if(gpsEventNumber == events.length - 1)
     {
         var lastpoint = new L.Marker(location, {
             icon: end_trip,
             zIndexOffset: 1300
         });
-        lastpoint.bindLabel(createLabel(tripNumber, gpsEvent, trip));
-        trips[tripNumber]['first_last_points'].push(lastpoint);
+        getAddresses(gpsEvent.latitude, gpsEvent.longitude, lastpoint);
+        trip['first_last_points'].push(lastpoint);
     }
-    else
-    {
-        if(gpsEvent.device_status == 'ignition_on_motion')
-        {
-            var motionpoint = new L.rotatedMarker(location, {
-                icon: arrow_move,
-                angle: parseInt(gpsEvent.azimuth)
-            });
-
-            motionpoint.bindLabel(createLabel(tripNumber, gpsEvent, trip));
-
-            if(gpsEventNumber % 200 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_200th_point'].push(motionpoint);
-            }
-
-            if(gpsEventNumber % 100 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_100th_point'].push(motionpoint);
-            }
-
-            if(gpsEventNumber % 50 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_50th_point'].push(motionpoint);
-            }
-
-            if(gpsEventNumber % 30 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_30th_point'].push(motionpoint);
-            }
-
-            if(gpsEventNumber % 10 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_10th_point'].push(motionpoint);
-            }
-
-            if(gpsEventNumber % 5 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_5th_point'].push(motionpoint);
-            }
-
-            if(gpsEventNumber % 2 == 0)
-            {
-                trips[tripNumber]['motion_points']['every_2th_point'].push(motionpoint);
-            }
-
-            // trips[tripNumber]['motion_points']['all_points'].push(motionpoint);
-        }
-
-        if(gpsEvent.device_status == 'ignition_on_rest')
-        {
-            if(trip.gps_events[gpsEventNumber - 1].device_status != 'ignition_on_rest')
-            {
-                var restpoint = new L.Marker(location);
-                assignIcon(restpoint, gpsEvent.device_status, gpsEvent.azimuth);
-                restpoint.bindLabel(createLabel(tripNumber, gpsEvent, trip));
-                trips[tripNumber]['rest_points'].push(restpoint);
-            }
-        }
-
-        if (gpsEvent.device_status == 'ignition_off_rest')
-        {
-            var stoppoint = new L.marker(location, {
-                zIndexOffset: 1200
-            });
-
-            assignIcon(stoppoint, gpsEvent.device_status, gpsEvent.azimuth);
-            stoppoint.bindLabel(createLabel(tripNumber, gpsEvent, trip));
-            trips[tripNumber]['stop_points'].push(stoppoint);
-        }
-
-        if( gpsEvent.device_status == 'tow' ||
-            gpsEvent.device_status == 'fake_tow' ||
-            gpsEvent.device_status == 'ignition_off_motion')
-        {
-            var towedpoint = new L.Marker(location);
-            assignIcon(towedpoint, gpsEvent.device_status, gpsEvent.azimuth);
-        }
-
-        if(gpsEvent.device_status == 'sensor_rest')
-        {
-            var sensorRestPoint = new L.Marker(location);
-            assignIcon(sensorRestPoint, gpsEvent.device_status, gpsEvent.azimuth);
-        }
-
-        if(gpsEvent.device_status == 'sensor_motion')
-        {
-            var sensorMotionPoint = new L.Marker(location);
-            assignIcon(sensorMotionPoint, gpsEvent.device_status, gpsEvent.azimuth);
-        }
-
-        if(gpsEvent.device_status == 'undefined')
-        {
-            var undefinedPoint = new L.Marker(location);
-            assignIcon(undefinedPoint, gpsEvent.device_status, gpsEvent.azimuth);
-        }
-    }
-}
-
-function createLabel(tripNumber, gpsEvent, trip)
-{
-    return translations.course_number+": <strong>"+tripNumber+"</strong>   |   "+
-    translations.time+": <strong>"+toDate(gpsEvent.gps_utc_time, "H:mm")+translations.hours+"</strong><br/>"+
-    translations.speed+": <strong>"+
-    parseFloat(gpsEvent.speed).toFixed(1)+" "+translations.km_hours+"</strong><br/>"+
-    translations.first_movement+": <strong>"+toDate(trip.start_time, 'D.MM.YYYY H:mm')+"</strong>";
-
-}
-
-function reloadStats(tripdate)
-{
-    tripdate = tripdate.substring(0, tripdate.indexOf('+'));
-
-    var work_hours = $('#report-'+tripdate+' .work_hours').val();
-    var move_time = $('#report-'+tripdate+' .move_time').val();
-    var stop_time = parseInt(work_hours) - parseInt(move_time);
-
-    if(move_time == '')
-    {
-        move_time = 0;
-    }
-
-    if(work_hours != '')
-    {
-        var moveTimeValue = parseFloat((move_time*100)/work_hours).toFixed(1);
-        var stopTimeValue = parseFloat((stop_time*100)/work_hours).toFixed(1);
-
-        if(!idlingDonut) {
-
-            idlingDonut = Morris.Donut({
-                element: 'efective-work',
-                data: [
-                    {label: translations.motion_hours, value: moveTimeValue },
-                    {label: translations.stop_hours, value: stopTimeValue }],
-                resize: true,
-                colors: ['#87d6c6', '#54cdb4'],
-                formatter: function (y, data) { return y + "%" }
-            });
-        }
-        else
-        {
-            idlingDonut.setData([
-                {label: translations.motion_hours, value: moveTimeValue },
-                {label: translations.stop_hours, value: stopTimeValue }
-            ]);
-        }
-    }
-
-}
-
-function clearObjects()
-{
-    for(var n in trips)
-    {
-        removeTripFromMap(n);
-    }
-}
-
-function getTripTravelTime(trip)
-{
-    var start_time = moment(trip.start_time.date);
-    var end_time = moment(trip.end_time.date);
-
-    var milliseconds = moment.duration(end_time.diff(start_time));
-    var duration = moment.duration(milliseconds, "milliseconds")
-        .format("hh:mm", { trim: false });
-
-   return duration;
 }
 
 function  toDate(date, format)
@@ -773,37 +284,28 @@ L.rotatedMarker = function (pos, options) {
     return new L.RotatedMarker(pos, options);
 };
 
-function getAddresses(tablename, tableobject)
+function getAddresses(latitude, longitude, point)
 {
-    var locale = $('.data-locale').data('locale');
-    $(tableobject.fnGetNodes()).each(function(n, tr){
-        $(tr).find('.coord-address').each(function(p, coordAddress)
-        {
-            var lat = parseFloat($(coordAddress).find('.lat-lng .lat').html());
-            var lng = parseFloat($(coordAddress).find('.lat-lng .lng').html());
+    var lat = parseFloat(latitude);
+    var lng = parseFloat(longitude);
 
-            var url = 'http://nominatim.openstreetmap.org/reverse?json_callback=?&accept-language='+locale+')';
+    var url = 'http://nominatim.openstreetmap.org/reverse?json_callback=?&accept-language=en)';
 
-            $.getJSON( url, {
-                format: "json",
-                lat: lat,
-                lon: lng,
-                zoom: 27,
-                addressdetails: 1
-            })
-            .done(function( json )
-            {
-
-                var pos = tableobject.fnGetPosition( coordAddress );
-                // Update the data array and return the value
-                tableobject.fnUpdate(json.address.road+', '+json.address.city+', '+json.address.country, pos[0], pos[1]);
-            })
-            .fail(function( jqxhr, textStatus, error ) {
-                var err = textStatus + ", " + error;
-                console.log( "Request Failed: " + err );
-                $(coordAddress).find('.address').html('Unknown');
-            });
-        });
+    $.getJSON( url, {
+        format: "json",
+        lat: lat,
+        lon: lng,
+        zoom: 27,
+        addressdetails: 1
+    })
+    .done(function( json )
+    {
+        // Update the data array and return the value
+        point.bindLabel(json.display_name);
+    })
+    .fail(function( jqxhr, textStatus, error ) {
+        var err = textStatus + ", " + error;
+        console.log( "Request Failed: " + err );
     });
 }
 
@@ -817,7 +319,7 @@ function addLastLocation()
         {
             var latLng = new L.LatLng(lastEvent.latitude, lastEvent.longitude);
 
-            mapper.addMarker(latLng);
+            mapper.addMarker(latLng, {icon:stopped_no_signal});
             bounds.extend(latLng);
 
             setTimeout(function()

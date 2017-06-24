@@ -49,19 +49,13 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $this->authorize('createUser', $this->company);
-
-        $roles  = $this->roles->all();
-        $user   = $this->slaveUser->auth();
+        $roles  = Role::all();
         $groups = $this->slaveGroup->with(['translation'])->get();
 
         $template = view('backend.users.partials.create')->with(
             [
                 'roles'   => $roles,
-                'user'    => $user,
-                'company' => $this->company,
                 'groups'  => $groups,
-                'model'   => $this->slaveUser->newObject(),
             ]
         )->render();
 

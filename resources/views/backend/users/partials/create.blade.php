@@ -8,7 +8,29 @@
             'data-table-name' => 'users_table'
         ]) !!}
 
-        @include('backend.providers.compose_translation_tabs_create')
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                {{ trans('general.first_name') }}
+            </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="firstname">
+                <span class="help-block m-b-none"></span>
+                {{-- A block of help text that breaks onto a new line and may extend beyond one line. --}}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">
+                {{ trans('general.last_name') }}
+            </label>
+
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="lastname">
+                <span class="help-block m-b-none"></span>
+                {{-- A block of help text that breaks onto a new line and may extend beyond one line. --}}
+            </div>
+        </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">
@@ -22,27 +44,11 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label class="col-sm-2 control-label">
-                {{trans('general.phone')}}
-            </label>
-
-            <div class="col-sm-10">
-                <input type="text" class="form-control" name="phone">
-                <span class="help-block m-b-none"></span>
-                    {{-- A block of help text that breaks onto a new line and may extend beyond one line. --}}
-            </div>
-        </div>
-
-        <input type="hidden" name="company_id" value="{{ $company->id }}">
-
         <div class="form-group"><label class="col-sm-2 col-md-2 col-lg-2 control-label">{{ trans('general.user_role') }}</label>
             <div class="col-sm-10">
                 <select class="form-control m-b fix-select2" name="role_id">
                     @foreach ($roles as $role)
-                        @can ('manageRole', $role)
-                            <option value="{{ $role->id }}">{{ $role->slug }}</option>
-                        @endcan
+                        <option value="{{ $role->id }}">{{ $role->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -56,7 +62,7 @@
             <div class="col-sm-10">
                 <select class="js-example-basic-multiple form-control fix-select2" name="groups[]" multiple="multiple">
                     @foreach ($groups as $group)
-                        <option value="{{ $group->id }}">{{{ $group->translation->first()->name ?: null }}}</option>
+                        <option value="{{ $group->id }}">{{{ $group->name ?: null }}}</option>
                     @endforeach
                 </select>
             </div>

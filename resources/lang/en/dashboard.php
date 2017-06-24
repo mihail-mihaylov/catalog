@@ -46,6 +46,7 @@ return [
     'general_report_daily_detailed_view'        => 'Detailed view for this day',
     'general_report_preferences'                => 'Preferences',
     'general_report_display_objects'            => 'Display tracked objects',
+    'general_report_display_poi'                => 'Display POI',
     'general_report_daily_eco_drive'            => 'Daily Eco Drive',
     'general_report_effective_work'             => 'Effective work',
     'general_report_courses_today'              => 'courses for this day',

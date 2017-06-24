@@ -4,6 +4,7 @@ namespace App\Modules\Reports\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\AjaxController;
+use App\Models\Device;
 use App\Models\GpsEvent;
 use App\Modules\Pois\Repositories\Eloquent\PoiRepository;
 use App\Modules\Reports\Http\Requests\GeneralReportRequest;
@@ -38,8 +39,13 @@ class GeneralReportController extends Controller
         $from = $request->from;
         $to = $request->to;
 
-        $events = $this->gpsEventRepository->getGpsEventsFromTo($deviceId, $from, $to)->keyBy('gps_utc_time');
-        $device         = $this->deviceRepository->getDeviceInfo($deviceId);
+        $events = [];
+        $this->gpsEventRepository->getGpsEventsFromTo($deviceId, $from, $to)
+            ->map(function ($gpsEvent) use (&$events) {
+                $events[Carbon::parse($gpsEvent->gps_utc_time)->toDateString()][] = $gpsEvent->toArray() ;
+            });
+        $device = $this->deviceRepository->getDeviceInfo($deviceId);
+
 
         return View::make('backend.reports.general.index')->with(compact('device', 'events', 'from', 'to'));
     }
@@ -49,26 +55,18 @@ class GeneralReportController extends Controller
         dd('show');
     }
 
-    public function getTrips(GetDailyTripInfoRequest $request, $date, $deviceId)
-    {
-        /**
-         *
-         * We should simply refactor this
-         * method to use POST instead of GET
-         *
-         */
-//        $date = $request->all()[3];
-//
-//        $start = clone $end = new Carbon($date);
-//
-//        return AjaxController::success(['trips' => $trips]);
-    }
-
     public function getLastEvent($deviceId)
     {
-//        $lastEvent = $this->gpsEventRepository->getLastGpsEvent($deviceId);
+        $lastEvent = Device::find($deviceId)->lastGpsEvent()->first();
 
-//        return AjaxController::success(['lastEvent' => $lastEvent]);
+        return AjaxController::success(['lastEvent' => $lastEvent]);
+    }
+
+    public function getTrips(Request $request, $date, $deviceId)
+    {
+        $events = $this->gpsEventRepository->getGpsEventsFrom($deviceId, $date);
+
+        return AjaxController::success(['events' => $events]);
     }
 
     public function getPopup()

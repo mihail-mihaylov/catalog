@@ -1,18 +1,7 @@
 
 /**
- * Define icons by device status
+ * Define icons
  */
-
-// Device statuses
-// 16 (Tow): The device attached vehicle is ignition off and it is towed.
-// 1A (Fake Tow): The device attached vehicle is ignition off and it might be towed.
-// 11 (Ignition Off Rest): The device attached vehicle is ignition off and it is motionless.
-// 12 (Ignition Off Motion): The device attached vehicle is ignition off and it is moving before it is treated as being towed.
-// 21 (Ignition On Rest): The device attached vehicle is ignition on and it is motion less
-// 22 (Ignition On Motion): The device attached vehicle is ignition on and it is moving
-// 41 (Sensor Rest): The device attached vehicle is motionless without ignition signal detected
-// 42 (Sensor Motion): The device attached vehicle is moving without ignition signal detected
-
 
 // Moving_east
 var move_e = L.icon({

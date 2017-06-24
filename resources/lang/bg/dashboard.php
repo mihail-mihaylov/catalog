@@ -45,6 +45,7 @@ return [
     'general_report_daily_detailed_view'        => 'Детайлен преглед за избрания ден',
     'general_report_preferences'                => 'Предпочитания',
     'general_report_display_objects'            => 'Показвай обекти',
+    'general_report_display_poi'                => 'Покажи статични обекти',
     'general_report_daily_eco_drive'            => 'Eco Drive за деня',
     'general_report_effective_work'             => 'Ефективна работа',
     'general_report_courses_today'              => 'курсове за деня',

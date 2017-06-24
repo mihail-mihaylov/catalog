@@ -22,30 +22,13 @@
                     </span>
                 </a>
             </li>
-            <li {{ Request::is('reports') || Request::is('reports/*') ? 'class=active' : '' }}>
+            <li {{ Request::is('reports/general')  ? 'class=active' : '' }}>
                 <a href="{{ route('general.index') }}">
-                    <i class="glyphicon glyphicon-stats"></i>
+                    <i class="glyphicon glyphicon-flash"></i>&nbsp;
                     <span class="nav-label">
-                        {{ trans_choice('sidebar.report', 2) }}
+                        {{ trans('reports.general_report') }}
                     </span>
-                    <span class="fa arrow"></span>
                 </a>
-
-                <ul class="nav nav-second-level collapse">
-                    <li {{ Request::is('reports/general') || Request::is('reports/general/*') ? 'class=active' : '' }}>
-                        <a href="{{ route('general.index') }}">
-                            <i class="glyphicon glyphicon-flash"></i>&nbsp;
-                            {{ trans_choice('sidebar.general_report', 1) }}
-                        </a>
-                    </li>
-
-                    <li {{ Request::is('reports/poi') || Request::is('reports/poi/*') ? 'class=active' : '' }}>
-                        <a href="{{ route('poi.index') }}">
-                            <i class="fa fa-crosshairs"></i>&nbsp;
-                            {{ trans('sidebar.poi_report') }}
-                        </a>
-                    </li>
-                </ul>
             </li>
 
             <li {{ Request::is('pois') ? 'class=active' : '' }}>
@@ -53,15 +36,6 @@
                     <i class="glyphicon glyphicon-map-marker"></i>
                     <span class="nav-label">
                         {{ trans_choice('sidebar.poi', 2) }}
-                    </span>
-                </a>
-            </li>
-
-            <li {{ Request::is('restrictions') ? 'class=active' : '' }}>
-                <a href="{{ route('restrictions.index') }}">
-                    <i class="glyphicon glyphicon-minus-sign"></i>
-                    <span class="nav-label">
-                        {{ trans_choice('sidebar.restrictions_and_violations', 2) }}
                     </span>
                 </a>
             </li>

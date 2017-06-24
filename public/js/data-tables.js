@@ -37,11 +37,10 @@ var datatable = $('.data-table').dataTable({
         }
 });
 
-$("#devices_list .dataTables_filter").appendTo($(".devices_search"));
 $("#users_list .dataTables_filter").appendTo($(".users_search"));
 $("#users_groups_list .dataTables_filter").appendTo($(".users_groups_search"));
-$("#restrictions_list .dataTables_filter").appendTo($(".restrictions_search"));
-$("#violations_list .dataTables_filter").appendTo($(".violations_search"));
+$("#devices_list .dataTables_filter").appendTo($(".devices_search"));
+$("#devices_groups_list .dataTables_filter").appendTo($(".devices_groups_search"));
 $("#groups_list .dataTables_filter").appendTo($(".groups_search"));
 $("#pois_list .dataTables_filter").appendTo($(".pois_search"));
 $("#poi_report_list .dataTables_filter").appendTo($(".poi_report_search"));

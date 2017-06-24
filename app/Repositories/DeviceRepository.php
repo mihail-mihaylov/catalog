@@ -25,9 +25,7 @@ class DeviceRepository extends EloquentRepository
 
     public function getDeviceInfo($deviceId)
     {
-        return $this->model
-            ->where('id', $deviceId)
-            ->get();
+        return $this->model->find($deviceId);
     }
 
     public function getAll()
