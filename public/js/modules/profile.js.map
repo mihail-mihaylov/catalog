@@ -1,1 +1,0 @@
-{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"profile.js","sourcesContent":["    $(document).on('modal_form_submited', function (event, success) {\n        $('.user_profile_data').html(success.html);\n    });\n"],"sourceRoot":"/source/"}
