@@ -2,912 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418f930b-3e3c-4224-881e-93ccbeb0c8de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/TimezoneHelper.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AjaxController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products/partials/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/products/partials/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/catalog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/catalog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Device.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DeviceModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/GpsEvent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Group.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Poi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PoiHistory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PoiI18n.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PoiPoint.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/SlaveDeviceModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserI18n.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/remember.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/Controllers/DashboardController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/Middleware/DashboardMiddleware.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/Objects/TrackedObjectDailyStatistics.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/Objects/TrackedObjectLastData.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/Requests/ManageTrainRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/Requests/TrackedObjectsRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/ViewComposers/DashboardSidebarComposer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Dashboard/Http/routes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Controllers/DeviceController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Controllers/TrackedObjectsGroupsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/CheckTrackedObjectIdentificationNumber.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/CreateDeviceRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/CreateTrackedObjectGroupRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/CreateUpdateTrackedObjectRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/UpdateDeviceRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/UpdateTrackedObjectGroupRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/Requests/UpdateTrackedObjectGroups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Http/ViewComposers/TrackedObjectsSidebarComposer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Models/DeviceTranslation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Observers/MasterDeviceObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Observers/SlaveDeviceObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Observers/SlaveDevicesTranslationObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/DeviceInputInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/DeviceInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/DeviceInputRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/DeviceRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/MasterDeviceModelRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/MasterDeviceRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/MasterTrackedObjectBrandRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/MasterTrackedObjectModelRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/MasterTrackedObjectTypeRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/SlaveDeviceModelRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/SlaveGroupsTrackedObjectsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/SlaveTrackedObjectBrandRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/SlaveTrackedObjectModelRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/SlaveTrackedObjectTypeRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/Eloquent/TrackedObjectRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/MasterDeviceInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/MasterDeviceModelInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/MasterTrackedObjectBrandInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/MasterTrackedObjectModelInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/MasterTrackedObjectTypeInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/SlaveDeviceModelInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/SlaveGroupsTrackedObjectsInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/SlaveTrackedObjectBrandInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/SlaveTrackedObjectModelInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/SlaveTrackedObjectTypeInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Devices/Repositories/TrackedObjectInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Http/Controllers/PoiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Http/Middleware/CreatePoiMiddleware.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Http/Requests/CreatePoiRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Http/Requests/UpdatePoiRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Http/routes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Observers/PoiTranslationsObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Repositories/Eloquent/PoiRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Pois/Repositories/PoiInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Controllers/GeneralReportController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Controllers/PoiReportController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Objects/GeneralReport.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Objects/GpsPoint.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Objects/Trip.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Objects/TripReport.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Requests/GeneralReportRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Requests/PoiReportRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Http/Utils/Report.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Interfaces/CanBusReportInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Interfaces/FuelReportInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Interfaces/ParametricReportInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Models/CanBusEvent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Models/CanBusEventReportGraphMutator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Repositories/CanBusReportRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Repositories/Eloquent/TripRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Repositories/FuelReportRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Repositories/ParametricReportRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Reports/Repositories/SlaveTripInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Http/Controllers/RestrictionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Http/Requests/CreateRestrictionRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Http/Requests/UpdateRestrictionRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Interfaces/AreaInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Interfaces/AreaPointInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Interfaces/RestrictionInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Interfaces/SlaveRestrictionTranslationsInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Models/Area.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Models/AreaI18n.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Models/AreaPoint.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Models/Limit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Models/LimitI18n.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Models/TrackedObjectLimit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Observers/AreaTranslationsObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Observers/RestrictionTranslationsObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Repositories/AreaPointsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Repositories/AreasRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Repositories/RestrictionRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Restrictions/Repositories/RestrictionTranslationsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Controllers/GroupsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Controllers/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Requests/AddGroupRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Requests/CreateUserRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Requests/DeleteUserRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Requests/RestoreUserRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/Requests/UpdateUserRequest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Http/routes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Models/SlaveUserI18n.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Observers/MasterUserObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Observers/SlaveGroupTranslationsObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Observers/SlaveUserObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Observers/SlaveUserTranslationsObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/Eloquent/EloquentRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/Eloquent/GroupTranslationsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/Eloquent/MasterUserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/Eloquent/SlaveUserI18nRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/Eloquent/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/MasterUserInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Repositories/SlaveUserInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Users/Traits/HasClientCompanies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Http/Controllers/ViolationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Http/routes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Interfaces/UserViolationNotificationInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Interfaces/ViolationInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Models/UserViolationNotification.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Models/Violation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Repositories/Eloquent/SlaveViolationsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Modules/Violations/Repositories/Eloquent/UserViolationNotificationRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/TranslationsObserver.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/DeviceRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/GpsEventRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/GroupRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/PoiRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/HasGroups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/HasTranslatedAttributes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/HasTranslation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/TimezoneAccessors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" afterPath="$PROJECT_DIR$/artisan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/autoload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_134816_create_devices_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_134817_create_gps_events__table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_140226_create_poi_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_140335_create_poi_points_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_140952_create_roles_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_140953_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_142202_create_groups_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_142228_create_users_groups_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_142249_create_devices_groups_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2017_06_17_143550_alter_devices_add_last_gps_event.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/leaflet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/leaflet.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/congruent_pentagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/header-profile-skin-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/header-profile-skin-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/header-profile-skin-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/header-profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/otis_redding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/shattered.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/patterns/triangular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/font-awesome/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/flags/BG-flag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/flags/EN-flag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/all.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/data-tables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/data-tables.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/define-icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/define-icons.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/leaflet_dependencies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/leaflet_dependencies.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/canbus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/canbus.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/companies.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/companies.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/dashboard/dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/dashboard/dashboard.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/drivers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/drivers.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/installer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/installer.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/parametric.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/parametric.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/pois/loadPois.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/pois/loadPois.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/pois/pois.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/pois/pois.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/profile.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/reports/fuel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/reports/fuel.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/reports/general.report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/reports/general.report.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/restrictions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/restrictions.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/sharedReminders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/sharedReminders.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/trackedObjectsGroups.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/trackedObjectsGroups.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/violations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/modules/violations.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/plugins.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/plugins.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/set_locale.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/set_locale.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/show_notification_violation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/show_notification_violation.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/socket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/socket.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/socket_event_handler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/socket_event_handler.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/users.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/geosearch/css/l.geosearch.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/geosearch/js/l.control.geosearch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/geosearch/js/l.geosearch.provider.google.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/geosearch/js/l.geosearch.provider.openstreetmap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/css/leaflet.label.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/BaseMarkerMethods.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/CircleMarker.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/FeatureGroup.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/Map.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/Marker.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/addons/labels/js/Path.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/css/fullscreen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/css/popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/dist/images/spritesheet-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/dist/images/spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/dist/leaflet.draw.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/arrow_first_pin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/arrow_pin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/icon-fullscreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/layers-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/layers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/leaflet.routing.icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/map_pin_key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/map_pin_stationary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/marker-house@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/marker-icon-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/marker-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/marker-icon@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/marker-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers-shadow@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/01_Pins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/02_Pins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/arr_move.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/arr_tow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/arr_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/begin_trip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/end_trip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/idling_78x78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_no_signal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/move_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/moving_78x78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/parked_78x78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/speed_violated.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/stop_eng_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/stop_no_signal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/towed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/markers/undefined.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/measure-control.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/office-marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/factory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/gas_station.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/house_parking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/office_building.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/service.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/pois/warehouse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/routing-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/images/spritesheet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/layers-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/layers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/marker-icon-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/marker-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/marker-icon@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/marker-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/images/measure-control.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/leaflet-src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/leaflet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/leaflet.fullscreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/libs/leaflet.measurecontrol.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/Control.Draw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/Leaflet.draw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/Toolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/Tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/DrawToolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.Circle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.Feature.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.Marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.Polygon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.Polyline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.Rectangle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/draw/handler/Draw.SimpleShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/EditToolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/Edit.Circle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/Edit.Marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/Edit.Poly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/Edit.Rectangle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/Edit.SimpleShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/EditToolbar.Delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/edit/handler/EditToolbar.Edit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/ext/GeometryUtil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/ext/LatLngUtil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/ext/LineUtil.Intersect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/ext/Polygon.Intersect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leaflet/src/ext/Polyline.Intersect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/media.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/modules/dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/congruent_pentagon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/header-profile-skin-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/header-profile-skin-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/header-profile-skin-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/header-profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/otis_redding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/shattered.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/patterns/triangular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/chartist/chartist.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/chosen/chosen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/clockpicker/clockpicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/dataTables/buttons.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/dataTables/datatables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/datapicker/datepicker3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/morris/morris-0.4.3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/nouislider/jquery.nouislider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/nouislider/nouislider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/nouislider/nouislider.tooltips.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/nv.d3/nv.d3.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/select2/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/switchery/switchery.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/plugins/toastr/toastr.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/style.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/z_app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/z_app.css~HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/font-awesome/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/img/flags/BG-flag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/img/flags/EN-flag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/img/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/app-notifications.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/bootstrap-modal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/data-tables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/define-icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/delegator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/chartjs-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/dashboard-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/flot-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/flot-demo2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/morris-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/peity-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/rickshaw-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/demo/sparkline-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/inspinia.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/jquery-2.1.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/jquery-ui-1.10.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/jquery-ui.custom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/locale/set_locale.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/mapper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/companies/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/installer/installer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/pois/loadPois.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/pois/pois.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/profile/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/reports/canbus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/reports/fuel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/reports/general.report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/reports/parametric.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/restrictions/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/sharedReminders/sharedReminders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/sharedTasks/sharedTasks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/tracked_objects/devices.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/tracked_objects/drivers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/tracked_objects/trackedObjects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/tracked_objects/trackedObjectsGroups.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/users/groups.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/users/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/users/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/modules/violations/violations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/moment-duration-format.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/mustache.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/chartist/chartist.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/chartist/chartist.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/chosen/chosen.jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/clockpicker/clockpicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/buttons.colVis.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/buttons.print.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/dataTables.bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/dataTables.buttons.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/dataTables.responsive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/dataTables.tableTools.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/swf/copy_csv_xls.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dataTables/swf/copy_csv_xls_pdf.swf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/datapicker/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/datapicker/datepicker-bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/dygraph/dygraph-combined.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/easypiechart/easypiechart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/easypiechart/jquery.easypiechart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/jquery/jquery-1.11.3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/jquery/jquery-migrate-1.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/metisMenu/jquery.metisMenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/morris/morris.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/morris/raphael-2.1.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/nouslider/nouislider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/nv.d3/d3.v3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/nv.d3/nv.d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/select2/select2.full.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/slimscroll/jquery.slimscroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/slimscroll/jquery.slimscroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/switchery/switchery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/tableExport/Blob.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/tableExport/FileSaver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/tableExport/tableexport-3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/tableExport/xlsx.core.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/plugins/toastr/toastr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/pusher.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/q.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/requester.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/show_notification_violation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/socket.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/socket/socket.io.event.handler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/users/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/geosearch/css/l.geosearch.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/geosearch/js/l.control.geosearch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/geosearch/js/l.geosearch.provider.google.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/geosearch/js/l.geosearch.provider.openstreetmap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/css/leaflet.label.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/BaseMarkerMethods.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/CircleMarker.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/FeatureGroup.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/Map.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/Marker.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/addons/labels/js/Path.Label.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/css/fullscreen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/css/popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/dist/images/spritesheet-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/dist/images/spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/dist/leaflet.draw.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/arrow_first_pin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/arrow_pin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/icon-fullscreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/layers-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/layers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/leaflet.routing.icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/map_pin_key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/map_pin_stationary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/marker-house@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/marker-icon-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/marker-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/marker-icon@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/marker-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers-shadow@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/01_Pins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/02_Pins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/arr_move.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/arr_tow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/arr_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/begin_trip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/end_trip.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/idling_78x78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_ne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_no_signal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_nw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_se.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_sw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/move_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/moving_78x78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/parked_78x78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/speed_violated.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/stop_eng_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/stop_no_signal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/towed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/markers/undefined.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/measure-control.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/office-marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/factory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/gas_station.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/house_parking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/office_building.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/service.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/pois/warehouse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/routing-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/images/spritesheet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/layers-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/layers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/marker-icon-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/marker-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/marker-icon@2x.png.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/marker-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/images/measure-control.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/leaflet-src.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/leaflet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/leaflet.fullscreen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/libs/leaflet.measurecontrol.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/Control.Draw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/Leaflet.draw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/Toolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/Tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/DrawToolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.Circle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.Feature.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.Marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.Polygon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.Polyline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.Rectangle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/draw/handler/Draw.SimpleShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/EditToolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/Edit.Circle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/Edit.Marker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/Edit.Poly.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/Edit.Rectangle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/Edit.SimpleShape.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/EditToolbar.Delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/edit/handler/EditToolbar.Edit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/ext/GeometryUtil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/ext/LatLngUtil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/ext/LineUtil.Intersect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/ext/Polygon.Intersect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/leaflet/src/ext/Polyline.Intersect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/area.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/brands.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/companies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/dashboard.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/dataTables.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/dates.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/devices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/drivers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/frontend.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/general.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/groups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/installer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/poi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/reminders.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/reports.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/restrictions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/sidebar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/tasks.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/trackedObjects.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/travelList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/trips.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/users.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/bg/violations.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/area.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/brands.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/companies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/dashboard.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/dataTables.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/dates.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/devices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/drivers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/frontend.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/groups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/installer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/poi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/reminders.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/reports.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/restrictions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/sidebar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/tasks.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/trackedObjects.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/travelList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/trips.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/users.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/violations.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/csrf_token.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/errors.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/password.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/companies/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/companies/partials/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/companies/partials/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/companies/partials/row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard/partials/devices_row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard/partials/map.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/partials/devices/devices_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/partials/devices/row_device.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/partials/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/partials/groups/groups_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/partials/groups/list_group_devices.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/devices/partials/groups/list_row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/drivers/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/drivers/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/drivers/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/drivers/partials/list_driver.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/export/trips/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/global_partials/view_violation_modal.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/groups/list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/finish_matching.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/partials/get_device_inputs_form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/partials/install_device_form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/partials/sidebar.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/partials/update_device_input.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/installer/slave.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/map/partials/map.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/map/partials/mapper.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/map/partials/rep.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/company_switch.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/errors.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/footer.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/header.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/modal.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/no_access.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/no_modules.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/page_title.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/profile_menu.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/set_locale.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/partials/sidebar.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/pois/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/pois/partials/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/pois/partials/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/pois/partials/poi_row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/profile/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/profile/user_preferences_form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/profile/user_profile_index_data.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/providers/compose_translation_tabs_create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/providers/compose_translation_tabs_edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/providers/partials/translation_tabs.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/canbus/canbus.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/canbus/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/fuel/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/fuel/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/general/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/general/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/parametric/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/parametric/index.blade.php~HEAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/parametric/partials/morris-line-chart.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/partials/travel-list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/poi/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/poi/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/trips/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/reports/trips/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/partials/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/partials/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/partials/list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/partials/map.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/partials/modal.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/restrictions/partials/row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/all.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/partials/row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/partials/trackedObjectReminderRow.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/partials/trackedObjectsRemindersList.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedReminders/showPersonalReminders.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedTasks/all.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedTasks/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedTasks/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedTasks/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedTasks/partials/shared_task_row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/sharedTasks/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/groups/partials/list_group.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/create_tracked_object.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/devices_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/groups_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/list_tracked_object_groups.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/list_tracked_objects.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/row_tracked_object.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/select_models_dropdown.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjects/partials/tracked_objects_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjectsGroups/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjectsGroups/partials/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjectsGroups/partials/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjectsGroups/partials/list_group_tracked_objects.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjectsGroups/partials/list_tracked_object_groups.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/trackedObjectsGroups/partials/row_group.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/client_company_users.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/company_users.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/create_group.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/edit_group.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/groups/list_group_users.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/groups/list_row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/groups_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/modal.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/users/users_list_row.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/partials/users_list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/violations/partials/list.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/violations/partials/notification.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/violations/partials/notifications.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/violations/partials/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/violations/partials/violation_notification_count.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/wrapper.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/slave.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/translations.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -921,47 +46,79 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="352">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="e#45#81#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/products/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/database/factories/ProductFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="220">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+        <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>unauth</find>
+      <find>render</find>
+      <find>json</find>
+      <find>article</find>
+      <find>registersusers</find>
+      <find>body</find>
+      <find>title</find>
+      <find>articles</find>
+      <find>arti</find>
+      <find>welcome</find>
+      <find>theme</find>
+      <find>firstname</find>
+      <find>fi</find>
+      <find>function routes</find>
+      <find>auth</find>
+      <find>endforeach</find>
+      <find>app</find>
+      <find>task</find>
+      <find>/home</find>
+      <find>logout</find>
+      <find>LoginController</find>
+      <find>function logout</find>
+      <find>auth:api</find>
+      <find>target</find>
+      <find>403</find>
+      <find>reset</find>
+      <find>ge</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -969,8 +126,49 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+        <option value="$PROJECT_DIR$/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/database/factories/ProductFactory.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_08_203118_create_products_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/users/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/js/products/products.js" />
+        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
+        <option value="$PROJECT_DIR$/resources/views/master.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_08_223043_adds_api_token_to_users_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
+        <option value="$PROJECT_DIR$/config/auth.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/storage/framework/views/c4ff3dcdb7197b21fc59d298608fac5c70117c87.php" />
+        <option value="$PROJECT_DIR$/resources/views/products/partials/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/products/partials/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Product.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/products/index.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/tests/Feature/LoginTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/LogoutTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ProductTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/RegisterTest.php" />
       </list>
     </option>
   </component>
@@ -1063,10 +261,18 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="19" />
+    <option name="y" value="11" />
     <option name="width" value="1686" />
     <option name="height" value="1018" />
   </component>
@@ -1077,6 +283,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1093,13 +300,30 @@
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
@@ -1110,7 +334,13 @@
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
@@ -1126,18 +356,125 @@
             <path>
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="catalog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Illuminate" type="462c0819:PsiDirectoryNode" />
+              <item name="Foundation" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1145,7 +482,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tracker" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mihail\code\catalog\app\Http\Controllers\API" />
+      <recent name="C:\Users\Mihail\code\catalog\tests\Feature" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mihail\code\catalog\resources\views" />
+      <recent name="C:\Users\Mihail\code\catalog\database\factories" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1177,18 +525,20 @@
       <updated>1546967137248</updated>
       <workItem from="1546967138602" duration="2502000" />
       <workItem from="1546973220079" duration="1782000" />
-      <workItem from="1546976099192" duration="779000" />
+      <workItem from="1546976099192" duration="15807000" />
+      <workItem from="1547208062039" duration="10767000" />
+      <workItem from="1547297432631" duration="57743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5063000" />
+    <option name="totallyTimeSpent" value="88601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692964" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1213,41 +563,369 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+    <entry file="file://$PROJECT_DIR$/webpack.mix.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/products/products.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        <state relative-caret-position="677">
+          <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_08_203118_create_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#34#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="1159" column="35" selection-start-line="1159" selection-start-column="35" selection-end-line="1159" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_08_223043_adds_api_token_to_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="163" column="56" selection-start-line="163" selection-start-column="56" selection-end-line="163" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/c4ff3dcdb7197b21fc59d298608fac5c70117c87.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="214" column="30" lean-forward="true" selection-start-line="214" selection-start-column="30" selection-end-line="214" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ProductsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#7#23#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/products/partials/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="66" lean-forward="true" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/products/partials/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+          <folding>
+            <element signature="e#42#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <element signature="e#23#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/DatabaseMigrations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="110">
+          <caret line="5" column="54" lean-forward="true" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="594">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <folding>
+            <element signature="e#7#35#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/LoginTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#41#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ProductTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/LogoutTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="e#45#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#44#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/RegisterTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/products/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/database/factories/ProductFactory.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
